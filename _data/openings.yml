@@ -1,0 +1,78 @@
+- title: Graphic Designer
+  description: "<p>We are hiring a designer to join our team part time (up to 20 hours per week).  As a designer at Awesome Inc you will be involved in every aspect of our company and will help take our brand to the next level.  Come be a part of our team and use your talents to help people pursue their definition of awesome!</p>
+  <b>Responsibilities:</b>
+  <ul>
+    <li>Take broad, conceptual ideas and turn them into something useful, valuable, and presentable for our audience</li>
+    <li>Design flows and experiences that are incredibly simple and elegant</li>
+    <li>Work with entrepreneurs to implement design needs for their startups (ie. logos, website design, product design, marketing materials)</li>
+    <li>Contribute to high-level strategic decisions with the rest of the management team</li>
+    <li>Work with our marketing team to execute marketing campaigns</li>
+    <li>Manage a team of design interns - give and solicit feedback from other designers in order to continually raise our bar for quality</li>
+  </ul>
+  <ul><b>Minimum Qualifications:</b>
+    <li>Excellent communication skills</li>
+    <li>Experience with web, print, and other digital design</li>
+    <li>Proficient in Adobe Creative Cloud (Illustrator, Photoshop & InDesign)</li>
+    <li>Understanding of fundamental typography rules and terms</li>
+    <li>Demonstrated experience with end-to-end (UX and UI) product design</li>
+    <li>Experience with Google Docs</li>
+  </ul>
+  <ul><b>Additional (nice to have) Qualifications:</b>
+    <li>Basic web programming skills (html, css)</li>
+    <li>Fluent with CMS tools (Wordpress, Drupal)</li>
+    <li>Experience with Mailchimp</li>
+    <li>Photography skills</li>
+  </ul>"
+  email: brian@awesomeinc.org
+  team: Awesome Inc
+  manager: Brian
+  time-commitment: part-time
+  active: false
+
+- title: Bootcamp Lead Instructor
+  description: Awesome Inc U is launching our next Developer Bootcamp in Fall of 2017. We are looking for a full time Lead Instructor to teach this 12-week, intensive, in-person program. Classes will be held M-F every day, with a few hours of instruction, and many hours of project work for the students.
+  email: info@awesomeincu.com
+  team: Awesome Inc U
+  manager: Nick
+  time-commitment: full-time
+  active: true
+
+- title: Bootcamp Assistant Instructor
+  description: We are looking for a Teaching Assistant for our Web Developer Bootcamp. This is a 15-week, full-time assignment. Our next Bootcamp session runs from September 18th - December 7th, 2017. During this 12-week, intensive, in-person program, classes are held M-F, 8am - 5pm.
+  email: info@awesomeinc.org
+  team: Awesome Inc U
+  manager: Nick
+  time-commitment: full-time
+  active: true
+
+- title: APAX Software Web Developer
+  description: APAX Software, the custom software development arm of Awesome Inc, is looking to hire a few rock star web developers to work on some exciting projects! Full time and part time positions are available. Pay is competitive and you'll be working from our downtown Lexington offices at Awesome Inc on Main Street. If you value a strong company culture, flexibility, and working for a company that wants to make the community a better place, then apply now.
+  email: brian@awesomeinc.org
+  team: APAX Software
+  manager: Brian
+  time-commitment: full-time or part-time
+  active: true
+
+- title: Software Developer
+  description: Our Software Development Company at <a href="www.apaxsoftware.com">Awesome Inc</a> is seeking candidates with experience in web and mobile application development.
+  email: brian@awesomeinc.org
+  team: APAX software
+  manager: Brian
+  time-commitment: part-time or full-time
+  active: false
+
+- title: Team Alpha Intern
+  description: Join our internship team called Team Alpha and get the experience you need to pursue your definition of awesome! Learn more by clicking the Apply Here button.
+  apply_url: http://www.awesomeinc.org/internships
+  email: emily@awesomeinc.org
+  team: Awesome Inc
+  manager: Emily
+  time-commitment: part-time
+
+- title: Coding Coach, Youth Courses
+  description: Coding Coaches are the foundation of our instructional team for our youth programs like the Academy, Coding Club, Coding League, and Week of Code summer camp. An ideal candidate for the Coding Coach, Youth courses role would be an experienced software developer who finds joy in sharing their knowledge with others. With a breadth of new languages, frameworks, and platforms arriving on the scene each year, we're less concerned with the code you've already written than your ability to learn whatever our students need you to learn (and help them learn) next.
+  email: info@awesomeincu.com
+  team: Awesome Inc U
+  manager: Nick
+  time-commitment: full-time
+  active: true

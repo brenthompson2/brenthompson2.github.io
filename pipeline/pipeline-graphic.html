@@ -1,0 +1,54 @@
+---
+layout: page
+permalink: pipeline/
+redirect_from: 
+ - /pipeline-graphic.html
+---
+<style type="text/css">
+	body {
+		margin-top: 50px;
+	}
+	svg {
+		padding-left: 10%;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
+</style>
+<link href="https://fonts.googleapis.com/css?family=Exo:400,900" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+<div id="loading">
+	<img class="center" id="loading-image" src="/assets/img/ajax-loader.gif" alt="Loading..." />
+</div>
+<script type="text/javascript" src="snap.svg-min.js"></script>
+
+<div id="stage"></div>
+
+<script type="text/javascript">
+
+$(window).on("load", function() {
+	
+	$("#loading").css("display", "none").animate({
+		opacity: 0
+	}, {
+		duration: 1000
+	});
+
+	$("#loading").hide().delay(2500);
+});
+
+$(document).ready(function() {
+	var s = Snap("#stage");
+
+	Snap.load("pipeline2016.svg", onSVGLoaded);
+	Snap.load("pipelineMobile.svg", onSVGLoaded);
+	function onSVGLoaded(svg) {
+
+		s.append(svg);
+
+	};
+
+});
+</script>
+

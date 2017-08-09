@@ -1,0 +1,40 @@
+<!-- Header content -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" >
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}" >
+    <meta property="description" content="{% if page.excerpt %}{{ page.excerpt }}{% else %}{{ site.description }}{% endif %}" >
+    <meta property="og:url" content="{% if page.url %}{{ site.url }}{{ page.url }}{% else %}{{ site.url }}{% endif %}" >
+    <meta name="author" content="Awesome Inc">
+    <meta name="google-site-verification" content="ZHa3CqXpt-ieUEB4w2KPISG0VTXYEnoGFNtCsaY3yeo" />
+   	<title>{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }} - {{ site.short_description }}{% endif %}</title>
+    {% include importer.html %}
+	<link rel="icon" href="/assets/ico/favicon.ico"> 
+  {% include pixels.html %}
+
+  </head>
+
+  <body>
+    <!-- Fixed navbar -->
+    
+    {% include nav.html %}
+
+ <!-- Modal Email Popup ############################################### -->
+ 
+    {% include email-popup.html %}
+    
+    <!-- /Modal Email Popup ############################
+
+    <!-- Body content ############################### -->
+    <div class="{{page.title | remove: ' '}}">
+      {{content}}
+    </div>
+
+    <!-- Footer content #################################### -->
+
+	{% include social.html %}
+
+ {% include footer.html %}

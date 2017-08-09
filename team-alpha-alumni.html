@@ -1,0 +1,72 @@
+---
+layout: page
+---
+<br><br><br>			
+			<div id="pop-up">
+					<div id="alpha-alumni">
+
+							<br><div class = "row centered"><strong>See the current <a href="/team-alpha">team</a></strong></div><br>
+
+							<h1><strong>Team Alpha Alumni</strong></h1><br>
+
+							<h2>Take a look at people who helped make Awesome Inc awesome!</h2><br>
+
+
+					<ul class="grid_TA_alumni cs-style-2">
+
+							{% assign sorted_alumni = (site.data.alumni | sort: 'name') %}
+
+							{% for alum in sorted_alumni %}
+							{% if alum.thumbnail != "http://i.imgur.com/sCovnRU.png" and  alum.thumbnail != "http://i.imgur.com/riaT1M8.png" %}
+
+
+							
+
+
+							<li>
+								<figure>
+
+									<div class ="alumni-img">
+										{% if alum.wallPhoto == true %}
+											<img src = '\assets\img\teamalpha\Team alpha wall photos\{{alum.name | downcase | remove: " " }}_wall.gif' alt="{{alum.name}}">
+										{% else %}
+											<img src = '{{alum.thumbnail}}' alt="{{alum.name}}">
+										{% endif %}
+
+
+										<figcaption style="overflow: auto;">
+
+												<h2>{{alum.name}}<br><span class="team">{{alum.team}}</span></h2>
+												<p>
+													<br>
+													<h4>Where are you now?</h4>
+														{{alum.location}}
+								
+													<h4>What are you doing?</h4>
+
+														{% for job in alum.work limit:1 %}
+														 	{{ job.position}} 
+
+														 	{% if job.company != "" %}
+														 		at {{job.company}}
+														 	{% endif %}
+
+														 {% endfor %}
+														 		
+													<h4>When were you with us?</h4>
+														{{alum.year}}
+													
+												</p>							
+												
+
+										</figcaption>
+									</div>
+								{% endif %}
+
+								</figure>
+							</li>
+								{% endfor %}
+					</ul>
+				</div>
+			</div>
+					

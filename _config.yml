@@ -1,0 +1,14 @@
+name: Awesome Inc
+short_description: Learn to code or build your tech startup.
+description:  Awesome Inc offers an accelerator, coding school, and a workspace for entrepreneurs.
+permalink: pretty
+relative_permalinks: false
+include: [_data]
+sass:
+  sass_dir: _scss
+  # style: compressed
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+exclude:
+  - node_modules

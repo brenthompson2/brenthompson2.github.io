@@ -1,0 +1,117 @@
+.ic_container{
+    vertical-align:baseline;
+    margin:10px;
+    position:relative;
+    /*-moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -khtml-border-radius:10px;
+    -moz-box-shadow: 0 1px 3px #888;
+    -webkit-box-shadow: 0 1px 3px #888;*/
+}
+.overlay{
+    opacity:0.3;
+    position:absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+.ic_caption{
+    position:absolute;    
+    opacity:0.6;   
+    overflow:hidden;
+    margin:0px;
+    padding:0px;
+    left:0px;
+    right:0px;
+    cursor:default;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
+}
+.ic_category{
+    text-transform:uppercase;
+    font-size:11px;
+    letter-spacing:3px;
+    padding:5px;
+    margin:0px;
+}
+.ic_caption h3{
+    padding:0px 5px 5px 5px;
+    margin:0px;
+    font-size:18px;
+}
+.ic_text{
+    padding:5px;
+    margin:0px;
+    text-align:justify;
+    font-size:11px;
+}
+
+@media (max-width: 1800px) {
+    #youtube-channel div#youmax {
+        padding-top: 50px;
+    }
+    #youmax .youmax-subscribe {
+        position: absolute;
+        margin-left: 85.5%;
+        margin-top: 8%;
+    }
+}
+
+@media (max-width: 991px) {
+    #youtube-channel div#youmax {
+        padding-top: 87px;
+    }
+    #youmax .youmax-subscribe {
+        margin-top: 14%;
+        margin-left: 80%
+    }
+}
+
+#youtube-channel span.youmax-tab-hover { 
+    background-color: #d9534f !important;
+}
+
+#youmax, #youtube-channel #youmax-tabs, #youmax-video-list-div {
+    background-color: #f8f8f8 !important;
+}
+
+#youmax .youmax-video-list-title {
+    color: black;
+}
+
+#youmax #youmax-header {
+    height: 175px;
+}
+
+
+#CustInfo{
+    width:100%;
+    padding:5px;
+    margin:5px;
+}
+
+#QuoteInfo{
+    width:100%;
+
+}
+#QuoteInfo h2{
+    font-size:35px !important;
+}
+#QuoteInfo p{
+    line-height:25px !important;
+}
+#QuoteOpen{
+   
+    
+}
+
+#WthroughAnchor{
+    height:50px;
+    width:100%;
+}
+#Wthrough{
+    background-color:rgb(255,222,223);
+    width:100% !important;
+    min-height:366px;
+}
