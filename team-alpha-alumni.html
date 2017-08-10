@@ -1,15 +1,15 @@
 ---
 layout: page
 ---
-<br><br><br>			
+<br><br><br>
 			<div id="pop-up">
 					<div id="alpha-alumni">
 
 							<br><div class = "row centered"><strong>See the current <a href="/team-alpha">team</a></strong></div><br>
 
-							<h1><strong>Team Alpha Alumni</strong></h1><br>
+							<br><h1><strong>Team Alpha Alumni</strong></h1><br>
 
-							<h2>Take a look at people who helped make Awesome Inc awesome!</h2><br>
+							<br><h2>Take a look at people who helped make Awesome Inc awesome!</h2><br>
 
 
 					<ul class="grid_TA_alumni cs-style-2">
@@ -20,7 +20,7 @@ layout: page
 							{% if alum.thumbnail != "http://i.imgur.com/sCovnRU.png" and  alum.thumbnail != "http://i.imgur.com/riaT1M8.png" %}
 
 
-							
+
 
 
 							<li>
@@ -41,23 +41,23 @@ layout: page
 													<br>
 													<h4>Where are you now?</h4>
 														{{alum.location}}
-								
+
 													<h4>What are you doing?</h4>
 
 														{% for job in alum.work limit:1 %}
-														 	{{ job.position}} 
+														 	{{ job.position}}
 
 														 	{% if job.company != "" %}
 														 		at {{job.company}}
 														 	{% endif %}
 
 														 {% endfor %}
-														 		
+
 													<h4>When were you with us?</h4>
 														{{alum.year}}
-													
-												</p>							
-												
+
+												</p>
+
 
 										</figcaption>
 									</div>
@@ -69,4 +69,3 @@ layout: page
 					</ul>
 				</div>
 			</div>
-					
