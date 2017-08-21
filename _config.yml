@@ -2,7 +2,7 @@
 title: Brendan Thompson's Website
 description: Brendan Thompson's personal blog
 #baseurl: "/My-Website" # the subpath of your site, e.g. /blog
-url: "https://brenthompson2.github.io/My-Website" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "https://brenthompson2.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 permalink: pretty
 highlighter: pygments #syntax highlighting
 
