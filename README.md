@@ -1,8 +1,12 @@
 # Brendan's Website
 
+
+
 ## The Website
 
-This website was developed with Jekyll & the Particle theme by Nathan Randecker
+[View the website](https://brenthompson2.github.io)
+
+This website was developed with Jekyll & the Particle theme by Nathan Randecker. Check out [this post](https://brenthompson2.github.io/Website-Design) describing the full process of building this website.
 
 ## The Theme
 https://github.com/nrandecker/particle
