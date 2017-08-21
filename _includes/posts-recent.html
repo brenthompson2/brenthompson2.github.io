@@ -1,0 +1,25 @@
+<div class="container">
+
+  <div class="home-details">
+    <h3> Recent Posts </h3>
+  </div>
+
+  <ul class="post-display">
+  	{% for post in site.posts %}
+    <li class="row">
+        <div class="six columns images">
+          <img src="{{ site.url }}{{ post.image }}" alt="{{ post.imageAlt }}">
+        </div>
+
+        <div class="six columns">
+          <h5><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h5>
+
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+          <t> - - - {{ post.author }}</t>
+          <p>{{ post.excerpt }}</p>
+        </div>
+    </li>
+    {% endfor %}
+  </ul>
+
+</div>

@@ -1,0 +1,25 @@
+{% for category in site.categories %}
+	{% assign category_name = category | first %}
+	<div class="container">
+
+		<div class="home-details">
+			<h2 id="{{ category_name | slugify }}">{{ category_name }}</h2>
+		</div>
+
+		<ul class="post-display">
+			{% for post in site.categories[category_name] %}
+		    <li class="row">
+		      	<div class="six columns">
+		    	 	<a href="{{ post.url }}">{{ post.title }}</a>
+		    	 	{{ post.excerpt }}
+		      	</div>
+
+		      	<div class="six columns">
+		        	<img alt="{{ post.imageAlt }}" src="{{ site.url }}{{ post.image }}">
+		      	</div>
+		    </li>
+			{% endfor %}
+		</ul>
+
+	</div>
+{% endfor %}
