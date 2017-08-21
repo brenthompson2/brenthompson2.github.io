@@ -4,7 +4,7 @@ description: Brendan Thompson's personal blog
 #baseurl: "/My-Website" # the subpath of your site, e.g. /blog
 url: "https://brenthompson2.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
 permalink: pretty
-highlighter: pygments #syntax highlighting
+#highlighter: pygments #syntax highlighting (pygments unsupported on github pages)
 
 # Navigation Bar
 navigation-header:
