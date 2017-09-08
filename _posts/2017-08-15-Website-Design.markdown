@@ -10,8 +10,6 @@ image: /assets/img/jekyllLogo.png
 imageAlt: Jekyll Logo
 ---
 
-![{{ page.imageAlt }}]({{ site.url }}{{ page.image }})
-
 To create this website I used [Jekyll](https://jekyllrb.com) and hosted it using [GitHub Pages](https://pages.github.com). Jekyll is a framework used to quickly develop lightweight static webpages to display content. The individual files are all created with Markdown, Liquid Templates, YAML Front Matter, HTML, or CSS. Jekyll is made to make blogging super easy by managing permalinks, categories, pages, and posts. It is also super easy to get up and running with custom themes.
 
 I learned how to use Jekyll through a [Udemy course created by AwesomeInc](https://www.udemy.com/jekyll-and-github-pages/). With that great video series, the [Jekyll docs](https://jekyllrb.com/docs/home/), and a lot of trial and error, developing my own website went fairly smooth and straightforward.

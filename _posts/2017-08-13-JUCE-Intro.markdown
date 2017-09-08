@@ -12,8 +12,6 @@ imageAlt: JUCE Logo
 
 ## What Is JUCE?
 
-![{{ page.imageAlt }}]({{ site.url }}{{ page.image }})
-
 [JUCE](https://www.juce.com) is a partially open-source cross-platform C++ application framework, used for the development of desktop and mobile applications. JUCE is used in particular for its GUI and plug-ins libraries
 
 I found JUCE while searching for a good method of creating VST plug-ins for Music Production. In particular, I was looking for a simple way to create a Synthesizer plug-in that I could use when producing music. However, I didn't want to spend the summer bogged down with Signal Processing and Wave Physics. That is where JUCE came in.

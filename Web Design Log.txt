@@ -4,6 +4,19 @@ Brendan Thompson
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
 
+09/07/17
+
+- Didn't Document a lot of changes
+
+- Some Grammer Updates
+- Added Awesome Inc Info to Bio
+- Wrote Post integrating slack incoming webhooks in Angular 2
+
+
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
 08/13/17
 
 - posts are finally working
