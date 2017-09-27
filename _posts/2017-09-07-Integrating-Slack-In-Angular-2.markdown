@@ -5,16 +5,16 @@ author: Brendan Thompson
 date:   2017-09-07 2:30:00 -0400
 permalink: /Integrating-Slack
 categories: Web-Design
-excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic Hybrid Mobile App Development
+excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
 image: /assets/img/slackLogo.png
 imageAlt: Slack Logo
 image2: /assets/img/ionicLogo.png
 image2Alt: Ionic Logo
 ---
 
-For my recent internship at Awesome Inc I have been doing some hybrid mobile app development using the Ionic framework. The goal is to create a mobile app to constantly have running on an iPad that allows guests to the facility to check in. The app then sends a message to the appropriate person via ![Slack](https://slack.com) regarding the arrival of the guest. Now that I have the messaging feature officially integrated, I just have a little more work to do until an official demo version is ready for testing.
+For my recent internship at Awesome Inc I have been doing some hybrid mobile app development using the Ionic framework. The goal is to create a mobile app to constantly have running on an iPad that allows guests to the facility to check in. The app then sends a message to the appropriate person via [Slack](https://slack.com) regarding the arrival of the guest. Now that I have the messaging feature officially integrated, I just have a little more work to do until an official demo version is ready for testing.
 
-When I was attempting to send a message to Slack from my Ionic app I rattled my brain for a good 6 or so hours before I finally figured out a good solution. Every other link online gave a completely different way of doing it. In the end I followed official tutorials on http post requests and customized them to the slack channel I was trying to reach. One huge roadblock that definitely stopped me from being able to figure it out was that I was testing it using <code>ionic serve --lab -lc</code> which emulates both iOS and Android in the Web Browser. It wasn't until emulating it on my LGV20 phone that I realized I had working code all along. I just plugged in the device, enabled debugging on the phone, and did <code>ionic cordova run android</code>.
+When I was attempting to send a message to Slack from my Ionic app I rattled my brain for a good 6 or so hours before I finally figured out a good solution. Every other link online gave a completely different way of doing it. In the end I followed official tutorials on http post requests and customized them to the slack channel I was trying to reach. One huge roadblock that definitely stopped me from being able to figure it out was that I was testing it using <code>ionic serve --lab -lc</code> which emulates both iOS and Android in the Web Browser. It wasn't until actually running it on my LGV20 phone that I realized I had working code all along. I just plugged in the device, enabled debugging on the phone, opened Android Studio, and ran in terminal <code>ionic cordova run android</code>.
 
 Without any further delay, lets dive into the theory...
 
@@ -24,9 +24,9 @@ HTTP, Hypertext Transfer Protocol, is the universally agreed upon underlying for
 
 ### Incoming Webhooks
 
-The reason I start with describing HTTP POST is because that is exactly how the mobile application is going to communicate the message to Slack. With the basic Slack account, a company is allowed to add 10 different Apps or Custom Integrations to their version of Slack. The custom integration necessary for sending messages from an external source is called an ![Incoming Webhook](https://api.slack.com/incoming-webhooks) and is decently well defined in the Slack documentation. As is described on the Slack website, the messages can get pretty elaborate with specific designated channels, usernames, images, attachments, and much more.
+The reason I started with describing HTTP POST is because that is exactly how the mobile application is going to communicate the message to Slack. With the basic Slack account, a company is allowed to add 10 different Apps or Custom Integrations to their version of Slack. We use Apps such as GitHub, Google Drive, and Trello to be increase productivity and boost the workflow. For sending messages from an external source there is a different type of connection called an [Incoming Webhook](https://api.slack.com/incoming-webhooks) and it is pretty well defined in the Slack documentation. As is described on the Slack website, the messages can get pretty elaborate with specific designated channels, usernames, images, attachments, and much more.
 
-To set up an Incoming WebHook, log into the Slack account and find the Manage Apps section. Create the new Custom Integration, change whatever setting are preferred, and save a copy of the URL that it provides. In order to ensure that it was set up properly, I was able to successfully run the following curl command in an Ubuntu terminal and see the message show up in Slack.
+To set up an Incoming WebHook: log into the Slack account, navigate to the App Directory, and click the Manage tab in the top right. Create a new Custom Integration, change whatever setting are preferred, and save a copy of the URL that it provides. In order to ensure that it was set up properly, I was able to successfully run the following curl command in an Ubuntu terminal and see the message show up in Slack.
 
 {% raw %}
 	curl -C POST -H 'Content-Type: application/json' \
@@ -38,28 +38,33 @@ To set up an Incoming WebHook, log into the Slack account and find the Manage Ap
 
 ![{{ page.image2Alt }}]({{ site.url }}{{ page.image2 }})
 
-See my (not yet written) post about Ionic for an overview of the elaborate combination of frameworks and languages that come together to create the hybrid mobile app development framework. In this tutorial we will be writing code in HTML and TypeScript that will have its data managed by Angular 2. We will be starting a blank application, ensuring that it runs properly, and then editing just a few of the 20,000+ files that make up a template project.
+If you are interested See my (not yet written) post about Ionic for an overview of the elaborate combination of frameworks and languages that come together to create this powerful hybrid mobile app development framework. In this tutorial we will be writing code in HTML and TypeScript that will have its data managed by Angular 2. We will be starting a blank application, ensuring that it runs properly, and then editing just a few of the 20,000+ files that make up a template project.
 
-The syntax for a POST request is basically <code>this.httpObject.post(URL, JSONobject)</code>
+The syntax for a POST request is basically <code>this.httpObject.post(URL, JSONobject)</code>. We just need to create a button that calls the function to send the post request on an instantiated instance of an http object and with a JSON object. JSON is a lightweight data interchange format for JavaScript that is easy for humans to read and write and easy for machines to parse and generate. That is the format with which the message content is passed.
 
 ### Part 1: Creating the new project
 
 Assuming that Ionic is already installed and configured on the system, run the following commands
 
 A) Create the testingSlackIntegration project using the blank template
-	<code>ionic start testingSlackIntegration blank</code>
+
+	ionic start testingSlackIntegration blank
 
 B) Add Android and iOS builds to the file
-	<code>ionic cordova platform add android</code>
-	<code>ionic cordova platform add ios</code>
 
-C) Ensure that the program builds and runs in the browser. <code>--lab</code> gives it a very nice UI and <code>-lc</code> enables console.log() to display in the terminal
-	<code>ionic serve --lab -lc</code>
+	ionic cordova platform add android
+	ionic cordova platform add ios
 
-D) Ensure that the program builds and runs on a device. **It would have saved me hours if I had known that the following method only works when running on the phone, and it does not work in the web browser version.**
-	For android, running on the phone just involved plugging in the device, ![enabling developer options](https://developer.android.com/studio/debug/dev-options.html), and building the app with <code>ionic cordova run android</code>. I also had ![Android Studio](https://developer.android.com/studio/index.html) up and running a blank new project, which was a whole process in itself.
+C) Ensure that the program builds and runs in the browser.
 
-	For iOS you need a mac, to run the project in Xcode, and possibly a $99/year developer account. This is the only way I know of to get the application onto an apple device.
+	ionic serve --lab -lc
+
+The flag <code>--lab</code> gives the browser view a very nice UI while <code>-lc</code> tells console.log() to send its messages to the terminal
+
+D) Ensure that the program builds and runs on a device. **It would have saved me hours if I had known that the code that we will soon be getting into only worked for me when running on the phone, and it does not work in the web browser version.**
+	For android, running on the phone just involved plugging in the device, [enabling developer options](https://developer.android.com/studio/debug/dev-options.html), and building the app with <code>ionic cordova run android</code>. I also had [Android Studio](https://developer.android.com/studio/index.html) up and running a blank new project, which was a whole process in itself.
+
+For iOS you need a mac, to run the project in Xcode, and possibly a $99/year developer account. That is the only way I have heard of to get the application onto an apple device, but I have not yet tested it.
 
 ### Part 2: Creating the User Interface
 
@@ -83,22 +88,24 @@ This is super simple. Just go ahead and open the file <code>.../testingSlackInte
 
 ### Part 3: Implementing the sendMessage() function
 
-The following code, which is to be implemented in <code>.../"  "/home.ts</code> is the meat of the integration process.
+The following code, which is to be implemented in the <code>home.ts</code> file in the same folder, is the meat of the integration process.
 
 A) Import the module necessary for creating an http request
-	<code>import { Http } from '@angular/http';</code>
 
-B) Declare the private member variable to the class
-	<code>private ourHttp: Http;</code>
+	import { Http } from '@angular/http';
 
-C) In the constructor of the class link the <code>ourHttp</code> member variable with instance of an http object.
+B) Declare the private member variable in the class
+
+	private ourHttp: Http;
+
+C) In the constructor of the class link <code>ourHttp</code> member variable with an instance of an http object.
 	{% raw %}
 	constructor(private http: Http) {
 		this.ourHttp = http;
 	}
 	{% endraw %}
 
-D) Create the sendMessage() function. Notice that we declare the URL we will be sending the request to and the exact JSON payload that we will be providing alongside. Without the .subscribe() function called, the http post will not be sent.
+D) Create the sendMessage() function.
 	{% raw %}
 	sendSlackMessage() {
 		var url = "https://hooks.slack.com/services/YOUR/CUSTOM/WEBHOOK/URL";
@@ -112,11 +119,17 @@ D) Create the sendMessage() function. Notice that we declare the URL we will be 
 	}
 	{% endraw %}
 
+Notice that we declare the URL we will be sending the request to and the exact JSON payload that we will be providing alongside. The URL will be the custom one provided by Slack through the Incoming Webhook that we set up for the task. The JSON payload can include all sorts of special features.
+
+Also, super importantly, without the .subscribe() function called the http post will not be sent.
+
 ### Part 4: Import the HttpModule component into the project
 
 In order for the project to run properly, the Angular system needs HttpModule to be imported into <code>../testingSlackIntegration/src/app/app.module.ts</code>
 
-A) At the top import the module <code>import { HttpModule } from '@angular/http'
+A) Import the module in the top of the file
+
+	import { HttpModule } from '@angular/http'
 
 B) Add it to the list of imports in @ngModule:
 	{% raw %}
@@ -131,8 +144,8 @@ B) Add it to the list of imports in @ngModule:
 
 ### Part 5: Test the Integration!
 
-Build and run the app on the phone using <code>ionic cordova run android</code>. **THIS CODE DID NOT WORK FOR ME WHEN USING <code>ionic serve --lab -lc</code>.** However, when testing on an actual device this code should have the <code>"text"</code> show up as a message on slack almost instantaneously!
+Build and run the app on the phone using <code>ionic cordova run android</code>. For me, this code did not appear to do anything in the web browser with <code>ionic serve --lab -lc</code>. However, when testing on an actual device this code should have the <code>"text"</code> show up as a message on slack almost instantaneously!
 
 ### Conclusion
 
-There are a million and a half different version of this code already out there on the internet, but it took me entirely too long to find an implementation that actually worked. However, keep in mind that I am not sure that I was testing using an actual device during that annoying experience. Stay tuned as either in an update of this post or in another I will be showing a more advanced version of this code that implements specific usernames and icons as well as dynamic channels, text, and more.
+There feels like a million and a half different version of post requests already out there on the internet, but it took me entirely too long to find an implementation that actually worked. Stay tuned as either in an update of this post or in a new one I will be showing a more advanced version of this code that implements specific usernames and icons as well as dynamic channels, text, and more. Also, I will be writing a post about the Ionic framework in general and the many advanced technologies the come together to create it. First, I have only a few days left to turn my template project into a beautiful working demo to present to the Owners, Directors, and Managers of Awesome Inc.
