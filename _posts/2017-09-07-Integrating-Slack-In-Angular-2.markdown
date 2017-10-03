@@ -38,7 +38,7 @@ To set up an Incoming WebHook: log into the Slack account, navigate to the App D
 
 ![{{ page.image2Alt }}]({{ site.url }}{{ page.image2 }})
 
-If you are interested See my (not yet written) post about Ionic for an overview of the elaborate combination of frameworks and languages that come together to create this powerful hybrid mobile app development framework. In this tutorial we will be writing code in HTML and TypeScript that will have its data managed by Angular 2. We will be starting a blank application, ensuring that it runs properly, and then editing just a few of the 20,000+ files that make up a template project.
+If you are interested see my [Introduction to Ionic 3]({{ site.url }}/Ionic-3) post for an overview of the elaborate combination of frameworks and languages that come together to create this powerful hybrid mobile app development framework. In this tutorial we will be writing code in HTML and TypeScript that will have its data managed by Angular 2. We will be starting a blank application, ensuring that it runs properly, and then editing just a few of the 20,000+ files that make up a template project.
 
 The syntax for a POST request is basically <code>this.httpObject.post(URL, JSONobject)</code>. We just need to create a button that calls the function to send the post request on an instantiated instance of an http object and with a JSON object. JSON is a lightweight data interchange format for JavaScript that is easy for humans to read and write and easy for machines to parse and generate. That is the format with which the message content is passed.
 
