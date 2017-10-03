@@ -32,25 +32,30 @@ Most notably, the Ionic Framework provides these tools:
 ### Other Frameworks Involved
 
 1) [Cordova](https://cordova.apache.org) by Apache
+
 	This is the powerful technology responsible for enabling the Hybrid Development. This open-source tool wraps HTML, CSS, and JavaScript and allows the user to write one set of code to target nearly every phone or tablet on the market. Basically, it is responsible for taking the code written in these web languages and turning it into Java/ObjectiveC/Swift which are the languages required by the actual mobile devices. Adobe made a proprietary version of the Cordova code and calls it PhoneGap.
 
-2) [Angular 2](https://angular.io/docs)
+2) [Angular 2](https://angular.io/docs) <i class="devicon-angularjs-plain colored"></i>
+
 	Angular is another open-source framework. It was specifically designed for creating web applications. It handles navigating between pages, binding data in real time to entities across the entire program, managing dependencies, and so much more.
 	I have found myself using Angular for the following things:
 		- Importing Components like NavController, NavParams, HttpModule, FormBuilder, and more
 		- Conditionals and Iteration using *ngIf and *ngFor
 		- Template variables like {% raw %}{{ program.name }}{% endraw %}
 
-3) [Node.js](https://nodejs.org)
+3) [Node.js](https://nodejs.org) <i class="devicon-nodejs-plain colored"></i>
+
 	This is the lightweight and efficient JavaScript runtime that uses an event-driven, non-blocking I/O model. Its package ecosystem, npm, is the largest manager of open source libraries in the world. It is necessary to install node.js and npm before Ionic.
 
 ## What are all these languages?
 
-1) TypeScript
+1) TypeScript <i class="devicon-typescript-plain colored"></i>
+
 	- open-source, developed and maintained by Microsoft
 	- strict, syntactical superset of JavaScript that adds optional static typing
 
-2) JavaScript (ES7, ES6, ES5)
+2) JavaScript (ES7, ES6, ES5) <i class="devicon-javascript-plain colored"></i>
+
 	- High-level, dynamic, weakly typed, object-based, multi-paradigm, interpreted programming language
 		- multi-paradigm = event-driven, functional, imperative (oop & prototype based)
 	- Used to make webpages interactive and provide online programs
@@ -65,11 +70,13 @@ Most notably, the Ionic Framework provides these tools:
 			- {} curly brackets hold objects
 			- [] square brackets hold arrays
 
-3) HTML = HyperText Markup Language
+3) HTML = HyperText Markup Language <i class="devicon-html5-plain-wordmark colored"></i>
+
 	- received from a web server or local storage and rendered into multimedia web pages
 	- denoted structural semantics
 
-4) CSS = Cascading Style Sheets
+4) CSS = Cascading Style Sheets <i class="devicon-css3-plain-wordmark colored"></i>
+
 	- used for describing the presentation of a document written in a markup language
 	- designed to enable the separation of presentation and content
 		- improve content accessibility
@@ -77,7 +84,8 @@ Most notably, the Ionic Framework provides these tools:
 		- enable multiple HTML pages to share formatting
 		- reduce complexity & repetition in the structural content
 
-5) Sass = Syntactically Awesome Style Sheets
+5) Sass = Syntactically Awesome Style Sheets <i class="devicon-sass-original colored"></i>
+
 	- "most mature, stable, and powerful professional grade CSS extension language in the world"
 	- scripting language that is interpreted or compiled into CSS
 	- the newer syntax uses block formatting like that of CSS and is a nested metalanguage (valid CSS is valid SCSS)
@@ -119,8 +127,10 @@ Most notably, the Ionic Framework provides these tools:
 			- only a noticeable difference if many moving parts, lots of animation, and heavy GPU processing
 
 2) Progressive Web Applications
+
 	- use responsive layouts and UI components that look similar to those found in native mobile applications
 
 3) Reactive Programming
+
 	- an asynchronous programming paradigm concerned with data streams and dynamically responding to change
 
