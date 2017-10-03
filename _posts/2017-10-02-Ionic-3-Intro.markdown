@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Integrating Slack In Ionic
+title: Introduction to the Ionic 3 Framework
 author: Brendan Thompson
-date:   2017-09-07 2:30:00 -0400
-permalink: /Integrating-Slack
+date:   2017-10-02 7:00:00 -0400
+permalink: /Ionic-3
 categories: Web-Design
-excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
+excerpt: An in depth introduction to the advanced software and concepts that come together to create the Ionic 3 hybrid mobile app development framework
 image: /assets/img/ionicLogo.png
 imageAlt: Ionic Logo
+image2: /assets/img/newtonGiants.jpg
+image2Alt: Standing on the Shoulders of Giants
 ---
 
 When I first arrived at Awesome Inc I had only the slightest experience with web development technologies. After producing some decent updates on a few of their different websites, I was thrown my own big project to tackle. I was asked to use the Ionic hybrid mobile framework to develop a mobile application. Getting started was quite the process, as I was still somewhat new to web development and struggling to understand the big complex interconnectedness of advanced technology that was Ionic. It wasn't until really breaking down the theory behind what all was going on that I was able to jump into the nuts and bolts of development.
@@ -17,6 +19,8 @@ When I first arrived at Awesome Inc I had only the slightest experience with web
 Software and Web Frameworks are basically a layer of abstraction that provide a standard way to build and deploy applications. They are universal, reusable environments that enable developers to skip past the more complex lower level details of providing a working system and instead allows them to devote their time to larger requirements. The goal of a framework is to provide a one-size-fits-all solution to the basic problems, and may include programs, compilers, code libraries, tool sets, and API's that bring together all of the components and enable development.
 
 ### The Ionic 3 Framework
+
+<img src="{{ site.url }}{{ page.image2 }}" alt="{{ page.image2Alt }}">
 
 Ionic is made up of a whole slew of other frameworks and technologies. Not only does it handle the communication between all of these advanced parts, it also adds some features by itself. It is an open-source SDK for building beautiful, native, and progressive hybrid mobile apps. Don't worry, we'll define some of those terms as we go forward.
 
