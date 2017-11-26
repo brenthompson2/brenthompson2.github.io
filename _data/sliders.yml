@@ -1,0 +1,42 @@
+# Recent Post Display Slider
+- selector: posts_recent
+  captions: true
+  bullets: true
+  images:
+    - src: /assets/img/jekyllLogo.png
+      title: Implementing the Ideal Image Slider in Jekyll in order to display posts and projects
+      href: /blog/ideal-image-slider
+    - src: /assets/img/ionicLogo.png
+      title: An in depth introduction to the advanced software and concepts that come together to create the Ionic 3 hybrid mobile app development framework
+      href: /ionic-3
+    - src: /assets/img/slackLogo.png
+      title: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
+      href: /integrating-slack
+    - src: /assets/img/jekyllLogo.png
+      title: Check out this brief description of getting started with Jekyll and getting my first website off the ground
+      href: /website-design
+    - src: /assets/img/JUCE.png
+      title: An Introduction to the JUCE Framework
+      href: /juce-intro
+  settings:
+    height: "400"
+    interval: "'10000'"
+    transitionDuration:
+    effect: "'fade'"
+
+# Featured Projects Display Slider
+- selector: projects_featured
+  captions: true
+  bullets: true
+  images:
+    - src: /assets/img/ionicLogo.png
+      title: The Awesome Check In mobile application is used by Awesome Inc to check in their guests and alert the appropriate team members
+      href: /projects/awesome-check-in
+    - src: /assets/img/project-images/traffic-cop-hero-1000.png
+      title: Traffic Cop Hero is an arcade shooter made with Unity
+      href: /projects/traffic-cop-hero-1000
+  settings:
+    height: "400"
+    interval: "'10000'"
+    transitionDuration:
+    effect: "'fade'"

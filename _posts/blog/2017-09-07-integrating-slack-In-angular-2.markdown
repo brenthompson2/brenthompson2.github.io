@@ -3,7 +3,7 @@ layout: post
 title: Integrating Slack In Ionic
 author: Brendan Thompson
 date:   2017-09-07 2:30:00 -0400
-permalink: /Integrating-Slack
+permalink: /integrating-slack
 categories: Web-Design
 excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
 image: /assets/img/slackLogo.png
@@ -14,7 +14,7 @@ image2Alt: Ionic Logo
 
 For my recent internship at Awesome Inc I have been doing some hybrid mobile app development using the Ionic framework. The goal is to create a mobile app to constantly have running on an iPad that allows guests to the facility to check in. The app then sends a message to the appropriate person via [Slack](https://slack.com) regarding the arrival of the guest. Now that I have the messaging feature officially integrated, I just have a little more work to do until an official demo version is ready for testing.
 
-When I was attempting to send a message to Slack from my Ionic app I rattled my brain for a good 6 or so hours before I finally figured out a good solution. Every other link online gave a completely different way of doing it. In the end I followed official tutorials on http post requests and customized them to the slack channel I was trying to reach. One huge roadblock that definitely stopped me from being able to figure it out was that I was testing it using <code>ionic serve --lab -lc</code> which emulates both iOS and Android in the Web Browser. It wasn't until actually running it on my LGV20 phone that I realized I had working code all along. I just plugged in the device, enabled debugging on the phone, opened Android Studio, and ran in terminal <code>ionic cordova run android</code>.
+When I was attempting to send a message to Slack from my Ionic app I rattled my brain for a good 6 or so hours before I finally figured out a working solution. Every other link online gave a completely different way of doing it. In the end I followed official tutorials on http post requests and customized them to the slack channel I was trying to reach. One huge roadblock that definitely stopped me from being able to figure it out was that I was testing it using <code>ionic serve --lab -lc</code> which emulates both iOS and Android in the Web Browser. It wasn't until actually running it on my LGV20 phone that I realized I had working code all along. I just plugged in the device, enabled debugging on the phone, opened Android Studio, and ran in terminal <code>ionic cordova run android</code>.
 
 Without any further delay, lets dive into the theory...
 
@@ -38,7 +38,7 @@ To set up an Incoming WebHook: log into the Slack account, navigate to the App D
 
 ![{{ page.image2Alt }}]({{ site.url }}{{ page.image2 }})
 
-If you are interested see my [Introduction to Ionic 3]({{ site.url }}/Ionic-3) post for an overview of the elaborate combination of frameworks and languages that come together to create this powerful hybrid mobile app development framework. In this tutorial we will be writing code in HTML and TypeScript that will have its data managed by Angular 2. We will be starting a blank application, ensuring that it runs properly, and then editing just a few of the 20,000+ files that make up a template project.
+If you are interested see my [Introduction to Ionic 3]({{ site.url }}/blog/Ionic-3) post for an overview of the elaborate combination of frameworks and languages that come together to create this powerful hybrid mobile app development framework. In this tutorial we will be writing code in HTML and TypeScript that will have its data managed by Angular 2. We will be starting a blank application, ensuring that it runs properly, and then editing just a few of the 20,000+ files that make up a template project.
 
 The syntax for a POST request is basically <code>this.httpObject.post(URL, JSONobject)</code>. We just need to create a button that calls the function to send the post request on an instantiated instance of an http object and with a JSON object. JSON is a lightweight data interchange format for JavaScript that is easy for humans to read and write and easy for machines to parse and generate. That is the format with which the message content is passed.
 

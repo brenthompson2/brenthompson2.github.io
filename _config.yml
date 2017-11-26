@@ -1,26 +1,23 @@
 # Site settings
 title: Brendan Thompson's Website
 description: Brendan Thompson's personal blog
-#baseurl: "/My-Website" # the subpath of your site, e.g. /blog
-url: "https://brenthompson2.github.io" # the base hostname & protocol for your site e.g. http://willianjusten.com.br
+url: "brendev.co"
 permalink: pretty
-#highlighter: pygments #syntax highlighting (pygments unsupported on github pages)
+
+# Sass
+sass:
+    sass_dir: _sass
 
 # Navigation Bar
-navigation-header:
-  Home: /
-  Posts: /Posts/
-  Categories: /Categories/
-  Projects: /Projects/
+# navigation-header:
+#   Home: /
+#   Posts: /posts/
+#   Categories: /Categories/
+#   Projects: /projects/
 
 # User settings
 username: Brendan Thompson
-user_description: I am graduating May 2018 from Transylvania University with a Bachelor of Arts Major in Computer Science and a Minor in Psychology. I dream of becoming a successful Software Developer
 user_title: Software Developer
 email: brenthompson2@gmail.com
-
-# Google-analytics
-google-analytics:
-  id: ""
 
 exclude: ['package.json', 'src' , 'node_modules']

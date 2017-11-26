@@ -1,16 +1,358 @@
+---
+---
+
+// =====================================
+// Contents:
+//  - Colors
+//  - Fonts
+//  - Style For Body
+//  - Style For NavBar
+//  - Style For Footer
+//  - Style For Home Page
+//  - Style For Posts Display
+//  - Style For Within Actual Posts
+//  - Containers
+//  - Style For Particle Theme Header
+// =====================================
+
+// =====================================
+// Colors
+// =====================================
+
 $main: #1a222c;
-$mainAnalogous1: #1b1a2c;
+$mainAnalogous1: rgba(27, 26, 44, 0.4);
 $mainAnalogous2: #1a2b2c;
+$mainTriadic1: rgba(26, 43, 44, 0.2);
+$mainTriadic2: rgba(26, 34, 44, 0.2);
+$mainTriadic3: rgba(26, 26, 44, 0.2);
 $sec: #4B5664;
 $purple: #54516A;
 $cut: 768px;
 
+// =====================================
+// Fonts
+// =====================================
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+// =====================================
+// Style For Body
+// =====================================
 
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+.content {
+  z-index: 1;
+  text-align: center;
+  color:#FFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0 auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  .site-title {
+    font-size: 50px;
+    display: block;
+    line-height: 1;
+    @media only screen and (min-width:$cut){
+      margin: 0;
+      font-size: 100px;
+    }
+  }
+  .site-description {
+    font-size: 20px;
+    display: block;
+    line-height: 1;
+    margin: 5px 0 10px 0;
+    @media only screen and (min-width:$cut){
+      font-size: 40px;
+    }
+  }
+  .link {
+    color: #FFF;
+    display: inline-flex;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px;
+    @media only screen and (min-width:$cut){
+      font-size: 20px;
+    }
+  }
+}
+
+// =====================================
+// Style For NavBar
+// =====================================
+
+nav.primary {
+  clear: both;
+  overflow: hidden;
+  margin: 0 0 1.5em;
+  padding: 0px;
+  position: fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  z-index: 99;
+  max-height: 8em;
+  background: $main;
+  img {
+    margin-left: 20px;
+    width: 100px;
+    height: auto;
+  }
+  h1 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-top: -85px;
+    margin-left: 130px;
+    position: fixed;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 400;
+  }
+}
+
+nav.primary ul {
+  list-style-type: none;
+  float: right;
+  padding: 2.7em 50px 0 0;
+  margin: 0;
+  font-size: 1.7em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  text-transform: uppercase;
+  li {
+    position: relative;
+    display: inline-block;
+    padding: 0px 0 10px 0;
+    margin-left: 10px;
+  }
+  li:hover {
+    border-bottom: 4px solid #e9e9e9;
+  }
+  a {
+    padding:5px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: border .5s ease-out;
+  }
+  a.hover {
+    border-bottom: 4px solid #e9e9e9;
+    cursor: pointer;
+  }
+}
+
+// =====================================
+// Style For Footer
+// =====================================
+
+.footer {
+  background: $main;
+  padding: 10px 0;
+  margin-top: 100px;
+  text-align: center;
+  color: #FFF;
+  .love {
+    color: red;
+  }
+  a {
+    text-decoration: none;
+    margin: 0;
+    color: #FFF;
+    &:hover{
+      color: $sec;
+    }
+    &:active {
+      color: $sec;
+    }
+  }
+}
+
+// =====================================
+// Style For HomePage
+// =====================================
+
+.home {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 60px;
+  p {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: $cut) {
+    font-size: 75px;
+  }
+}
+
+.home-details {
+  margin: 10px auto;
+  padding: 5%;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+  background-color: $mainTriadic1;
+}
+
+.home-softDev {
+  margin: 10px auto;
+  padding: 5%;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+  background-color: $mainTriadic2;
+}
+
+.home-webDev {
+  margin: 10px auto;
+  padding: 5%;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 16px;
+  background-color: $mainTriadic3;
+}
+
+.home-about {
+  margin: 40px auto;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  h3 {
+    margin: 0;
+    text-align: center;
+  }
+  li {
+    color: $main;
+    font-size: 1.5rem;
+  }
+  p {
+    margin-right: 5px;
+    text-align: justify;
+  }
+}
+
+.home-projects {
+  margin: 40px auto;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  h5 {
+    margin: 0;
+  }
+  li {
+    color: $main;
+    font-size: 1.5rem;
+  }
+  p {
+    margin-right: 5px;
+  }
+}
+
+// =====================================
+// Style For Post Display
+// =====================================
+
+.post-display {
+  margin: 40px auto;
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  iframe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  h3 {
+    margin: 0;
+  }
+  li {
+    list-style-type: upper-roman;
+    margin-left: 0;
+    color: $main;
+    font-size: 1.1rem;
+  }
+  p {
+    margin-right: 5px;
+    color: $mainAnalogous1;
+  }
+}
+
+.project-link {
+  display: block;
+  width: 100px;
+  margin: 10px 0px;
+  padding: 5px;
+  color: $main;
+  background-color: transparent;
+  border: 1px solid $main;
+  border-radius: 10px;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease-out,
+              background-color 0.3s ease-out,
+              border-color 0.3s ease-out;
+  &:hover {
+    background-color: $purple;
+    border-color: $purple;
+    color: #fff;
+    transition: color 0.3s ease-in,
+                background-color 0.3s ease-in,
+                border-color 0.3s ease-in;
+  }
+  &:active {
+    background-color: $purple;
+    border-color: $purple;
+    color: #fff;
+    transition: color 0.3s ease-in,
+                background-color 0.3s ease-in,
+                border-color 0.3s ease-in;
+  }
+}
+
+// =====================================
+// Containers
+// =====================================
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+}
+
+// =====================================
+// Style For Particle Theme Header
+// =====================================
 
 @-webkit-keyframes pulse {
     from {
@@ -68,47 +410,6 @@ body {
   .particles-js-canvas-el {
     width:100vw !important;
     height:100vh !important;
-  }
-}
-
-.content {
-  z-index: 1;
-  text-align: center;
-  color:#FFF;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: 0 auto;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  .site-title {
-    font-size: 50px;
-    display: block;
-    line-height: 1;
-    @media only screen and (min-width:$cut){
-      margin: 0;
-      font-size: 100px;
-    }
-  }
-  .site-description {
-    font-size: 20px;
-    display: block;
-    line-height: 1;
-    margin: 5px 0 10px 0;
-    @media only screen and (min-width:$cut){
-      font-size: 40px;
-    }
-  }
-  .link {
-    color: #FFF;
-    display: inline-flex;
-    justify-content: space-between;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:$cut){
-      font-size: 20px;
-    }
   }
 }
 
@@ -175,175 +476,6 @@ body {
   }
 }
 
-.video-container {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 30px; height: 0; overflow: hidden;
-}
 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%
-}
 
-.home {
-  text-align: center;
-  margin: 20px auto;
-  font-size: 60px;
-  p {
-    font-size: 16px;
-  }
-  @media only screen and (min-width: $cut) {
-    font-size: 75px;
-  }
-}
 
-.home-details {
-  text-align: center;
-  font-size: 16px;
-  margin: 10px auto;
-}
-
-.home-about {
-  margin: 40px auto;
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  iframe {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  h3 {
-    margin: 0;
-    text-align: center;
-  }
-  li {
-    color: $main;
-    font-size: 1.5rem;
-  }
-  p {
-    margin-right: 5px;
-    text-align: justify;
-  }
-}
-
-.home-projects {
-  margin: 40px auto;
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  iframe {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  h5 {
-    margin: 0;
-  }
-  li {
-    color: $main;
-    font-size: 1.5rem;
-  }
-  p {
-    margin-right: 5px;
-  }
-}
-
-.post-display {
-  margin: 40px auto;
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  iframe {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-  }
-  h3 {
-    margin: 0;
-  }
-  li {
-    list-style-type: upper-roman;
-    margin-left: 0;
-    color: $main;
-    font-size: 1.1rem;
-  }
-  p {
-    margin-right: 5px;
-    color: $mainAnalogous1;
-  }
-}
-
-.images {
-  @media only screen and (min-width: $cut) {
-    float: right;
-  }
-}
-
-.project-link {
-  display: block;
-  width: 100px;
-  margin: 10px 0px;
-  padding: 5px;
-  color: $main;
-  background-color: transparent;
-  border: 1px solid $main;
-  border-radius: 10px;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease-out,
-              background-color 0.3s ease-out,
-              border-color 0.3s ease-out;
-  &:hover {
-    background-color: $purple;
-    border-color: $purple;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
-  }
-  &:active {
-    background-color: $purple;
-    border-color: $purple;
-    color: #fff;
-    transition: color 0.3s ease-in,
-                background-color 0.3s ease-in,
-                border-color 0.3s ease-in;
-  }
-}
-
-.footer {
-  background: $main;
-  padding: 10px 0;
-  margin-top: 100px;
-  text-align: center;
-  color: #FFF;
-  .love {
-    color: red;
-  }
-  a {
-    text-decoration: none;
-    margin: 0;
-    color: #FFF;
-    &:hover{
-      color: $sec;
-    }
-    &:active {
-      color: $sec;
-    }
-  }
-}

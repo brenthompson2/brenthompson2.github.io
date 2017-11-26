@@ -25,9 +25,34 @@ body{font-family:'Montserrat',sans-serif}
 .home{text-align:center;margin:20px auto;font-size:60px}
 .home p{font-size:16px}
 @media only screen and (min-width:768px){.home{font-size:75px}}
+/*
+.home-details {
+  margin: 10px auto;
+  padding: 5%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  background-color: rgba(26, 43, 44, 0.3);
+}
 
-.home-details{text-align:center;font-size:16px;margin:10px auto}
+.home-softDev {
+  margin: 10px auto;
+  padding: 5%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  background-color: rgba(26, 34, 44, 0.3);
+}
 
+.home-webDev {
+  margin: 10px auto;
+  padding: 5%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  background-color: rgba(26, 26, 44, 0.3);
+}
+*/
 .home-about {
   text-align:center;margin: 40px auto;
   }

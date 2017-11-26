@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: page
+image_sliders:
+  - posts_recent
+  - projects_featured
+---
 
-  {% include head.html %}
-  <body>
     {% include header.html %}
 
     <section id="about">
@@ -10,14 +12,9 @@
     </section>
 
     <section id="projects-featured">
-      {% include projects-featured.html %}
+      {% include projects-featured-slider.html %}
     </section>
 
     <section id="posts-recent">
-      {% include posts-recent.html %}
+      {% include posts-recent-slider.html %}
     </section>
-
-    {{ content }}
-
-    {% include footer.html %}
-  </body>

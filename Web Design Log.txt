@@ -4,6 +4,47 @@ Brendan Thompson
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
 
+11/26/17
+
+- Added NavBar
+	- Created _include
+	- linked to in _layouts/default
+		- not yet on homepage because don't know how to make it go no higher than below the main header
+	- NavBar section in main.scss
+
+- Formatted all of main.scss
+
+- Changed all pages & permalinks to lowercase (Search Engine Optimization)
+
+- Implemented Ideal Image Slider & made a post about it
+	- www.brendev.co/ideal-image-slider
+
+- Set up google analytics
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+10/11/17
+
+- Added Digital Arts & Media Minor to about.html
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+10/02/17
+
+- Ionic Post
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
+09/27/17
+
+- Angular & Slack Post
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+
 09/07/17
 
 - Didn't Document a lot of changes

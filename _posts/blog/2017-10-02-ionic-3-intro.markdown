@@ -3,7 +3,7 @@ layout: post
 title: Introduction to the Ionic 3 Framework
 author: Brendan Thompson
 date:   2017-10-02 7:00:00 -0400
-permalink: /Ionic-3
+permalink: /ionic-3
 categories: Web-Design
 excerpt: An in depth introduction to the advanced software and concepts that come together to create the Ionic 3 hybrid mobile app development framework
 image: /assets/img/ionicLogo.png

@@ -3,10 +3,10 @@ layout: post
 title: My First Post!
 author: Brendan Thompson
 date:   2017-08-11 16:30:02 -0400
-permalink: /First-Post
+permalink: /first-post
 categories: Testing
 excerpt: My first ever post on my new website
-published: true # jekyll serve --unpublished to view
+published: false # jekyll serve --unpublished to view
 image: /assets/img/mountains.jpg
 imageAlt: Mountains
 ---
