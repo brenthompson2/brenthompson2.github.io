@@ -8,5 +8,5 @@ image_sliders:
 ---
 
 <div class="container">
-	{% include posts-recent-slider.html %}
+	{% include posts-categories.html %}
 </div>

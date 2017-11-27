@@ -8,5 +8,5 @@ image_sliders:
 ---
 
 <div class="container">
-	{% include projects-featured-slider.html %}
+	{% include projects-featured.html %}
 </div>

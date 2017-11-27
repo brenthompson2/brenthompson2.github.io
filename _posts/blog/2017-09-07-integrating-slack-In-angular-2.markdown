@@ -4,12 +4,14 @@ title: Integrating Slack In Ionic
 author: Brendan Thompson
 date:   2017-09-07 2:30:00 -0400
 permalink: /integrating-slack
-categories: Web-Design
+categories: Ionic
 excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
-image: /assets/img/post-images/slack-logo.png
-imageAlt: Slack Logo
-image2: /assets/img/post-images/ionic-logo.png
-image2Alt: Ionic Logo
+image: /assets/img/post-images/slackapi-angularjs.jpg
+imageAlt: Slack and Angular
+image2: /assets/img/post-images/slack-logo.png
+image2Alt: Slack Logo
+image3: /assets/img/post-images/ionic-logo.png
+image3Alt: Ionic Logo
 ---
 
 For my recent internship at Awesome Inc I have been doing some hybrid mobile app development using the Ionic framework. The goal is to create a mobile app to constantly have running on an iPad that allows guests to the facility to check in. The app then sends a message to the appropriate person via [Slack](https://slack.com) regarding the arrival of the guest. Now that I have the messaging feature officially integrated, I just have a little more work to do until an official demo version is ready for testing.
@@ -24,6 +26,8 @@ HTTP, Hypertext Transfer Protocol, is the universally agreed upon underlying for
 
 ### Incoming Webhooks
 
+![{{ page.image2Alt }}]({{ site.url }}{{ page.image2 }})
+
 The reason I started with describing HTTP POST is because that is exactly how the mobile application is going to communicate the message to Slack. With the basic Slack account, a company is allowed to add 10 different Apps or Custom Integrations to their version of Slack. We use Apps such as GitHub, Google Drive, and Trello to be increase productivity and boost the workflow. For sending messages from an external source there is a different type of connection called an [Incoming Webhook](https://api.slack.com/incoming-webhooks) and it is pretty well defined in the Slack documentation. As is described on the Slack website, the messages can get pretty elaborate with specific designated channels, usernames, images, attachments, and much more.
 
 To set up an Incoming WebHook: log into the Slack account, navigate to the App Directory, and click the Manage tab in the top right. Create a new Custom Integration, change whatever setting are preferred, and save a copy of the URL that it provides. In order to ensure that it was set up properly, I was able to successfully run the following curl command in an Ubuntu terminal and see the message show up in Slack.
@@ -36,7 +40,7 @@ To set up an Incoming WebHook: log into the Slack account, navigate to the App D
 
 ### Sending the POST request in Ionic
 
-![{{ page.image2Alt }}]({{ site.url }}{{ page.image2 }})
+![{{ page.image3Alt }}]({{ site.url }}{{ page.image3 }})
 
 If you are interested see my [Introduction to Ionic 3]({{ site.url }}/blog/Ionic-3) post for an overview of the elaborate combination of frameworks and languages that come together to create this powerful hybrid mobile app development framework. In this tutorial we will be writing code in HTML and TypeScript that will have its data managed by Angular 2. We will be starting a blank application, ensuring that it runs properly, and then editing just a few of the 20,000+ files that make up a template project.
 

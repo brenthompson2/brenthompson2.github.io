@@ -4,7 +4,7 @@ title: Ideal Image Slider in Jekyll
 author: Brendan Thompson
 date:   2017-11-26 7:00:00 -0400
 permalink: /ideal-image-slider
-categories: Web-Design Jekyll
+categories: Web-Design
 excerpt: Implementing the Ideal Image Slider in Jekyll in order to display posts and projects
 image: /assets/img/post-images/jekyll-logo.png
 imageAlt: Jekyll Logo
