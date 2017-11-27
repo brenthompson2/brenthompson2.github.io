@@ -6,9 +6,9 @@ date:   2017-10-02 7:00:00 -0400
 permalink: /ionic-3
 categories: Web-Design
 excerpt: An in depth introduction to the advanced software and concepts that come together to create the Ionic 3 hybrid mobile app development framework
-image: /assets/img/ionicLogo.png
+image: /assets/img/post-images/ionic-logo.png
 imageAlt: Ionic Logo
-image2: /assets/img/newtonGiants.jpg
+image2: /assets/img/post-images/newton-giants.jpg
 image2Alt: Standing on the Shoulders of Giants
 ---
 

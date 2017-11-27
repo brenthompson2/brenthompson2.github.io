@@ -21,6 +21,10 @@ Brendan Thompson
 
 - Set up google analytics
 
+- Made post about Projects Page
+
+- Set Paragraph font-family to Raleway
+
 ---------------------------------------------------------------------
 ---------------------------------------------------------------------
 

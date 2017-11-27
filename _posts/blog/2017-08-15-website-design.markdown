@@ -6,7 +6,7 @@ date:   2017-08-15 2:30:00 -0400
 permalink: /website-design
 categories: Web-Design
 excerpt: Check out this brief description of getting started with Jekyll and getting my first website off the ground
-image: /assets/img/jekyllLogo.png
+image: /assets/img/post-images/website-header-pic.png
 imageAlt: Jekyll Logo
 ---
 

@@ -1,7 +1,7 @@
 # Site settings
 title: Brendan Thompson's Website
 description: Brendan Thompson's personal blog
-url: "brendev.co"
+# url: "brendev.co"
 permalink: pretty
 
 # Sass

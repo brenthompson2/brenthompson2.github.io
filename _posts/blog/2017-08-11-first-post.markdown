@@ -7,7 +7,7 @@ permalink: /first-post
 categories: Testing
 excerpt: My first ever post on my new website
 published: false # jekyll serve --unpublished to view
-image: /assets/img/mountains.jpg
+image: /assets/img/post-images/mountains.jpg
 imageAlt: Mountains
 ---
 

@@ -3,23 +3,23 @@
   captions: true
   bullets: true
   images:
-    - src: /assets/img/jekyllLogo.png
+    - src: /assets/img/post-images/jekyll-logo.png
       title: Implementing the Ideal Image Slider in Jekyll in order to display posts and projects
-      href: /blog/ideal-image-slider
-    - src: /assets/img/ionicLogo.png
+      href: /ideal-image-slider
+    - src: /assets/img/post-images/ionic-logo.png
       title: An in depth introduction to the advanced software and concepts that come together to create the Ionic 3 hybrid mobile app development framework
       href: /ionic-3
-    - src: /assets/img/slackLogo.png
+    - src: /assets/img/post-images/slackapi-angularjs.jpg
       title: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
       href: /integrating-slack
-    - src: /assets/img/jekyllLogo.png
+    - src: /assets/img/post-images/website-header-pic.png
       title: Check out this brief description of getting started with Jekyll and getting my first website off the ground
       href: /website-design
-    - src: /assets/img/JUCE.png
-      title: An Introduction to the JUCE Framework
+    - src: /assets/img/post-images/juce-logo.png
+      title: A simple introduction to the JUCE C++ Audio Development Framework
       href: /juce-intro
   settings:
-    height: "400"
+    height: "'16:9'"
     interval: "'10000'"
     transitionDuration:
     effect: "'fade'"
@@ -29,14 +29,14 @@
   captions: true
   bullets: true
   images:
-    - src: /assets/img/ionicLogo.png
+    - src: /assets/img/project-images/awesome-checkin/checkin-screensaver.png
       title: The Awesome Check In mobile application is used by Awesome Inc to check in their guests and alert the appropriate team members
-      href: /projects/awesome-check-in
+      href: /awesome-check-in
     - src: /assets/img/project-images/traffic-cop-hero-1000.png
       title: Traffic Cop Hero is an arcade shooter made with Unity
-      href: /projects/traffic-cop-hero-1000
+      href: /traffic-cop-hero-1000
   settings:
-    height: "400"
+    height: "'16:9'"
     interval: "'10000'"
     transitionDuration:
     effect: "'fade'"

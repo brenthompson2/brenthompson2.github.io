@@ -6,9 +6,9 @@ date:   2017-09-07 2:30:00 -0400
 permalink: /integrating-slack
 categories: Web-Design
 excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
-image: /assets/img/slackLogo.png
+image: /assets/img/post-images/slack-logo.png
 imageAlt: Slack Logo
-image2: /assets/img/ionicLogo.png
+image2: /assets/img/post-images/ionic-logo.png
 image2Alt: Ionic Logo
 ---
 

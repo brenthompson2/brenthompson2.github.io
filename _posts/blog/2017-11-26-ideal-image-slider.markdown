@@ -6,11 +6,11 @@ date:   2017-11-26 7:00:00 -0400
 permalink: /ideal-image-slider
 categories: Web-Design Jekyll
 excerpt: Implementing the Ideal Image Slider in Jekyll in order to display posts and projects
-image: /assets/img/jekyllLogo.png
+image: /assets/img/post-images/jekyll-logo.png
 imageAlt: Jekyll Logo
 ---
 
-The [Ideal Image Slider](jekylltools.github.io/jekyll-ideal-image-slider-include/examples/) is an open source content slider by [CodeinWP](github.com/Codeinwp) that was made for wordpress sites. It was [originally designed](github.com/Codeinwp/Ideal-Image-Slider-JS) with the intensions to "create a slider which has just the right amount of features, with no bloat and be easy to extend so that more features can be added as extensions". It was ported to Jekyll by [jekylltools](github.com/jekylltools) as an [include](github.com/jekylltools/jekyll-ideal-image-slider-include), which is where I learned how to use it. In this post I break down the individual steps of implementing it into a jekyll site. There is also a [ruby plugin version](github.com/jekylltools/jekyll-ideal-image-slider-include) that uses liquid tags but it is not compatible with Github Pages and therefore I have not yet used it.
+The [Ideal Image Slider](https://jekylltools.github.io/jekyll-ideal-image-slider-include/examples/) is an open source content slider by [CodeinWP](https://github.com/Codeinwp) that was made for wordpress sites. It was [originally designed](https://github.com/Codeinwp/Ideal-Image-Slider-JS) with the intensions to "create a slider which has just the right amount of features, with no bloat and be easy to extend so that more features can be added as extensions". It was ported to Jekyll by [jekylltools](https://github.com/jekylltools) as an [include](https://github.com/jekylltools/jekyll-ideal-image-slider-include), which is where I learned how to use it. In this post I break down the individual steps of implementing it into a jekyll site. There is also a [ruby plugin version](https://github.com/jekylltools/jekyll-ideal-image-slider) that uses liquid tags but it is not compatible with Github Pages and therefore I have not yet used it.
 
 ## Implementing the Slider
 
@@ -18,7 +18,7 @@ The process of setting up the slider is not incredibly challenging. The steps ba
 
 ### Step 1: Add the CSS & JS Files
 
-There are 5 different files necessary to get the slider to run. I am using the versions directly behind the demo site, which are hosted in the [assets folder](github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages/assets) of the gh-pages branch.
+There are 5 different files necessary to get the slider to run. I am using the versions directly behind the demo site, which are hosted in the [assets folder](https://github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages/assets) of the gh-pages branch.
 
 ##### The CSS
 
@@ -37,7 +37,7 @@ Create a new folder `/assets/js/slider/` and add the js behind the slider itself
 
 ### Step 2: Add the Includes
 
-There are 3 different includes necessary to get the slider to run. Once again I am using the versions directly behind the demo site, which this time are hosted in the [includes folder](github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages/_includes) of the github repository.
+There are 3 different includes necessary to get the slider to run. Once again I am using the versions directly behind the demo site, which this time are hosted in the [includes folder](https://github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages/_includes) of the github repository.
 
 ##### The HTML
 
@@ -63,7 +63,7 @@ The scripts must be included at the very end of the `<body>` of the page. For me
 
 ### Step 4: Create a Slider
 
-The settings behind each slider is loaded from the folder `/_data/`. Create one if the website doesn't already have it and add the file `sliders.yml`. Hopefully someday there will be a nice way to have the slider dynamically pull images, excerpts, etc from the front matter of the actual posts. However, in the meantime each slider must be statically defined in the yaml file. There are quite a few setting that can be manipulated, and the complete list can be found in the [READEME](github.com/Codeinwp/Ideal-Image-Slider-JS/blob/master/README.md) of the original slider.
+The settings behind each slider is loaded from the folder `/_data/`. Create one if the website doesn't already have it and add the file `sliders.yml`. Hopefully someday there will be a nice way to have the slider dynamically pull images, excerpts, etc from the front matter of the actual posts. However, in the meantime each slider must be statically defined in the yaml file. There are quite a few setting that can be manipulated, and the complete list can be found in the [READEME](https://github.com/Codeinwp/Ideal-Image-Slider-JS/blob/master/README.md) of the original slider.
 
 	- selector: posts_recent
 	  captions: true

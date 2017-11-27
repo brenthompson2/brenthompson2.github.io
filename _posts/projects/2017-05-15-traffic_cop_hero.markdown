@@ -3,7 +3,7 @@ layout: post
 title: Traffic Cop Hero 1000
 author: Brendan Thompson
 date:   2017-08-13 7:30:00 -0400
-permalink: /projects/traffic-cop-hero-1000
+permalink: /traffic-cop-hero-1000
 categories: Traffic Cop Hero
 excerpt: Traffic Cop Hero is an arcade shooter made with Unity
 image: /assets/img/project-images/traffic-cop-hero-1000.png
