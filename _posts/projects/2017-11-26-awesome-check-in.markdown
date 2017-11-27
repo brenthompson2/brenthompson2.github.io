@@ -12,23 +12,23 @@ imageAlt: Ionic Logo
 
 ### The App
 
-Awesome Inc was having quite an issue when guests would arrive to their facility. Upon entering the building guests would walk up to the first person that they saw and ask them what to do. As it is a co-working space, the guest was often disrupting people who were not team members of Awesome Inc to go track down the appropriate team member. Now, with Awesome Check In, guests are directed to an iPad where they select the program that they are there for, supply their name, email, reason for coming, and select the team members that are expecting them. The app then sends a [Slack](slack.com) message to the designated Awesome Inc employee and directs them to sit down on the couch.
+The first time that I entered Awesome Inc I went straight up to the first person I saw, introduced myself, and said that I was there for a meeting about an internship opportunity. The lady then got up and found the Director of Operations as I nervously waited on the couch just inside the front door. This may sound fine and dandy, but it was actually a huge problem that Awesome Inc had been dealing with. Guests to the facility would approach the person at the closest desk to the door and expect them to be some sort of secretary. However, as it is a co-working space, the people being disrupted more often than not were not even actually team members of Awesome Inc. Now, with Awesome Check In, guests are directed to an iPad where they select the program that they are interested in; supply their name, email, and reason for coming; and then select the team members that are expecting them. The app then sends a [Slack](slack.com) message to the designated Awesome Inc employee and directs them to sit down on the couch. Thanks to Awesome Check In, that person working hard in the Awesome Inc co-working space is no longer being interrupted by every guest to walk in the door.
 
 ### The Ionic Framework
 
-The app itself was created using the open source [Ionic 3](https://ionicframework.com) hybrid mobile app development framework. I wrote a detailed description of the framework in a [recent blog post]({{ site.url }}/blog/ionic-3). Basically, Ionic leverages the power of a whole multitude of web technologies and compiles it into native code that can run on either ios or android phones. The web to native wrapper is the open source technology called Cordova. The code itself utilizes Angular 2, Bootstrap, Node.js,
+The app itself was created using the open source [Ionic 3](https://ionicframework.com) hybrid mobile app development framework. I wrote a detailed description of the framework in a [recent blog post]({{ site.url }}/ionic-3). Basically, Ionic leverages the power of a whole multitude of web technologies and compiles it into native code that can run on both ios and android phones. The web to native wrapper utilizes the open source technology called Cordova while the code itself is managed by Angular 2, Bootstrap, Node.js, and more.
 
 ### Major Functions
 
 ##### Forms
 
-![User Info Form]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-userinfo.png)
-
 There are two main forms that the user fills out while checking in. The first one asks which team members the user is intending to meet with. They are provided with a check-box list of team members and are allowed to select multiple. If they are just walking in and do not have a meeting, they can select the "Nobody: Set up a Meeting" option. At the end, the messages are sent via slack to the appropriate people or else to the general "Check In" channel. There is a validator which ensures that one of the check boxes has been selected.
+
+![User Info Form]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-userinfo.png)
 
 The second form asks for some basic information from the user. They are giving three text boxes to fill out: name, email, and reason. All of the formControls are mandatory in order to proceed.
 
-Once properly filled out the form data is passed to each consecutive page until the user is presented with a Confirm page. They have the ability to look over the info the provided as well as the selected team members. Upon clicking submit, the information is sent as a slack message to the corresponding people.
+Once properly filled out the form data is passed to each consecutive page until the user is presented with a Confirm page. They have the ability to look over the info they provided as well as the selected team members. Upon clicking submit, the information is sent as a slack message to the corresponding people.
 
 ##### Slack Messaging
 
@@ -36,12 +36,18 @@ Once properly filled out the form data is passed to each consecutive page until 
 
 One of the key functions of the app is that it sends messages to the appropriate Awesome Inc team members via Slack. The [Slack API](https://api.slack.com) was super easy to use and allows for incredibly customizable messages. They even created a beautiful [Message Builder](https://api.slack.com/docs/messages/builder) that allows for live testing of different messages with attachments, buttons, and more.
 
-I created an in depth [blog post]({{ site.url }}/blog/integrating-slack) about the process of sending a message from the Awesome Check In app into Slack, but the process is quite simple. It basically revolves around creating a JSON object in the format specified by the API and sending it in an HTTP POST request. The intended receiver as well as all of the text, images, links, and attachments are included in the one JSON object. The only other part is setting up Incoming Webhooks as a Custom Integration within Slack itself.
+I created an in depth [blog post]({{ site.url }}/integrating-slack) about the process of sending a message from the Awesome Check In app into Slack. It basically revolves around creating a JSON object in the format specified by the API and sending it in an HTTP POST request. The JSON object includes the intended recipient as well as all of the text, images, links, and attachments for the message. The only other part is setting up Slack itself to accept Incoming Webhooks as a Custom Integration.
 
 ##### Idle Timer
 
 ![Idle Timer]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-idle.png)
 
-The most recent addition to the Awesome Check In app was the implementation of an Idle Timer. The application recognizes that it has been idling on the same page for 60 seconds. It then gives the user 10 seconds to choose to continue working on the forms before it automatically returns to the eye catching starting page.
+The most recent addition to the Awesome Check In app was the implementation of an Idle Timer that recognizes when it has been idling on the same page for 60 seconds. It then gives the user 10 seconds to choose to continue working on the forms before it automatically returns to the home page.
 
-A detailed blog post about implementing the timer has not yet been created as this feature is still under development. Getting it all working properly has been quite a process. Basically the timer is an injectable provider called timer where a new instance gets instantiated for every page and properly started/stopped/restarted when navigating between pages. The provider itself was based off the countdown timer by [Dave Shirman](http://www.codingandclimbing.co.uk/blog/ionic-2-simple-countdown-timer). The hardest part has been managing the different instances, and it still currently has a bug where pressing the back button does not stop the last timer. The two different solutions that are currently being worked on are only creating one instance of the timer and passing it between all of the pages or otherwise overwriting the back-button functionality to call a special function that pauses the timer. Both options are currently being tested, but in the meantime the bug does not cause any real issues and for the most part goes unnoticed.
+A detailed blog post about implementing the timer has not yet been created as this feature is still under development. Getting it all working properly has been quite a process. Basically the timer is an injectable provider called timer where a new instance gets instantiated for every page and started/stopped/restarted when navigating between pages. The provider itself was based off the countdown timer by [Dave Shirman](http://www.codingandclimbing.co.uk/blog/ionic-2-simple-countdown-timer). The hardest part has been managing the different instances, and it still currently has a bug that does not cause any real issues and for the most part goes unnoticed. Pressing the back button does not stop the last timer, and I am still testing two options for fixing the issue. One solution is to only create one instance of the timer and pass it between all of the pages while another fix is to manipulate the back-button functionality to also call a function on the page that pauses the timer.
+
+### Awesome Check In
+
+The app has been checking in guests to Awesome Inc for over a month now. However, it feels like there are always things that can be done to it. The next steps are to get the timer working perfect, get with the designer to make it look sharp, and possibly add the ability for the user to take and send a selfie within the message.
+
+Overall the app has been a lot of fun to build, and I have learned so much about web development. My biggest complaint is that the app runs pretty slow, which is a major drawback of using Ionic and its web-to-native hybrid mobile development technology. I look forward to developing in native code or, better yet, a future where all mobile manufacturers accepted some of the same programming languages.
