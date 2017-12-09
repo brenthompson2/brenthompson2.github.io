@@ -12,7 +12,7 @@ imageAlt: Jekyll Logo
 
 The [Ideal Image Slider](https://jekylltools.github.io/jekyll-ideal-image-slider-include/examples/) is an open source content slider by [CodeinWP](https://github.com/Codeinwp) that was made for wordpress sites. It was [originally designed](https://github.com/Codeinwp/Ideal-Image-Slider-JS) with the intensions to "create a slider which has just the right amount of features, with no bloat and be easy to extend so that more features can be added as extensions". It was ported to Jekyll by [jekylltools](https://github.com/jekylltools) as an [include](https://github.com/jekylltools/jekyll-ideal-image-slider-include), which is where I learned how to use it. In this post I break down the individual steps of implementing it into a jekyll site. There is also a [ruby plugin version](https://github.com/jekylltools/jekyll-ideal-image-slider) that uses liquid tags but it is not compatible with Github Pages and therefore I have not yet used it.
 
-<strong>Warning: I no longer recommend the Ideal Image Slider as a method of displaying posts as it is pretty much broken when viewed on mobile.</strong>
+<strong>Warning: I no longer recommend the Ideal Image Slider as a method of displaying posts as it is pretty much broken when viewed on mobile. I am now using the [Flexslider](http://flexslider.woothemes.com/). A new post will be written about the topic in the near future. In the meantime, my website's [github repository](https://github.com/brenthompson2/brenthompson2.github.io) currently shows how this is done. The process is just about the exact same as with the Flexslider.</strong>
 
 ## Implementing the Slider
 
@@ -55,7 +55,7 @@ In the `/_includes/` folder add the html behind the slider itself, the scripts, 
 
 The main stylesheet needs to be included in the `<head>` of the page. For me, I included the code for linking to it in my `/_includes/head.html` which gets included in my main layout called `page.html`
 
-	{% include slider_styles.html %}
+	{% raw %}{% include slider_styles.html %}{% endraw %}
 
 ##### The Includes
 

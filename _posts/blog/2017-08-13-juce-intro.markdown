@@ -6,8 +6,10 @@ date:   2017-08-13 2:30:00 -0400
 permalink: /juce-intro
 categories: JUCE-Audio
 excerpt: A simple introduction to the JUCE C++ Audio Development Framework
-image: /assets/img/post-images/juce.png
+image: /assets/img/post-images/juce-logo.png
 imageAlt: JUCE Logo
+image2: /assets/img/post-images/juce.png
+image2Atl: JUCE Logo
 ---
 
 ## What Is JUCE?
