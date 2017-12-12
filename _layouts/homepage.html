@@ -11,10 +11,17 @@ image_sliders:
       {% include about.html %}
     </section>
 
-    <section id="projects-featured">
-      {% include flexslider-projects-hardcoded.html %}
-    </section>
+    <div class="container row">
+      <div class="six columns">
+        <section id="projects-featured">
+          {% include flexslider-projects-hardcoded.html %}
+        </section>
+      </div>
 
-    <section id="posts-recent">
-      {% include flexslider-posts-hardcoded.html %}
-    </section>
+      <div class="six columns">
+        <section id="posts-recent">
+          {% include flexslider-posts-hardcoded.html %}
+        </section>
+      </div>
+
+    </div>
