@@ -179,10 +179,9 @@ nav.primary ul {
 // Style For Within Posts
 // =====================================
 
-.post-content{
-  // text-align: center;
-  h1, h3 {
-    text-align: center;
+.post-header{
+  text-align: center;
+  h1 {
     font-family: 'Montserrat', sans-serif;
   }
   time {
@@ -190,13 +189,22 @@ nav.primary ul {
     font-weight: 300;
     font-family: 'Raleway', sans-serif;
   }
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
+.post-content{
+  h3 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
   p {
     font-size: 16px;
     font-weight: 300;
     font-family: 'Raleway', sans-serif;
-  }
-  img {
-    text-align: center;
   }
 }
 

@@ -6,15 +6,15 @@ date:   2017-12-11 7:00:00 -0400
 permalink: /transy-compiler-executor
 categories: C++
 excerpt: The Transy Language Compiler and Executor was created for the Compiler Construction course during the fall of 2017 at Transylvania University
-image: /assets/img/project-images/transy-compiler-executor.png
-imageAlt: Console During Use
+image: /assets/img/transy-logo-bat.png
+imageAlt: Transylvania Raf Logo
 ---
 
-## The Transy Language
+### The Transy Language
 
-The language itself was only ever verbally described to the students in class. There were certain specifics that everybody needed to meet, but overall each compiler implemented some aspects differently than other. For more information, see the complete version of the [Transy Language Specification](/transy-language-spec).
+For more information on the Transy Language, see my complete version of the [Transy Language Specification](/transy-language-spec).
 
-## The Compiler
+### The Compiler
 
 The compiler itself is a 3-pass compiler. On its first pass it gathers all of the line labels into the LineLabel table. On the second pass it removes all spaces, removes all blank lines, and changes all characters except those in literals to uppercase. It outputs the modified file as `noblanks.txt`. This file is what is read in during the third pass. The compiler parses the command names and calls on the specific command handlers to process the actual command.
 
@@ -54,7 +54,7 @@ This is the class defined in Compiler.cpp & Compiler.h.
 	MAX_NUM_FLAGS 7
 	MAX_NUM_LINES_IN_TRANSY_PROGRAM 1000
 
-## Compiler Components
+### Compiler Components
 
 #### FileManager
 
@@ -140,7 +140,7 @@ lineLabelObject
 
 This is the compiler's object defined in ExpressionFixConverter.cpp & ExpressionFixConverter.h. It handles converting assignment statements from infix to postfix. It relies heavily on the ExpressionConvertingMatrix to determine what actions to take for each input value, given the current state of the expression.
 
-## The Executor
+### The Executor
 
 The executor is significantly simpler than the compiler. It assumes that all of the lines of code are correct, and therefore doesn't handle many errors. It does give a few warnings.
 
@@ -239,7 +239,7 @@ loopObject
 	MAX_NUM_LOOPS 7
 
 
-## Shared Components
+### Shared Components
 
 #### LiteralManager
 
@@ -269,7 +269,9 @@ literalTableObject (for compilation)
 	NOT_FOUND_IN_ARRAY -1
 	UNDEFINED_LITERAL 0.123456789
 
-## The Commands
+### The Commands
+
+This section is currently the exact same as the [Transy Language Specification](/transy-language-spec)
 
 #### read
 

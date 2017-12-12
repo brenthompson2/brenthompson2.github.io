@@ -6,20 +6,22 @@ date:   2017-12-11 7:00:00 -0400
 permalink: /transy-language-spec
 categories: C++
 excerpt: The Transy Language defined for the Compiler Construction course during the fall of 2017 at Transylvania University
-image: /assets/img/project-images/transy-compiler-executor.png
-imageAlt: Console During Use
+image: /assets/img/transy-logo-bat.png
+imageAlt: Transylvania Raf Logo
 ---
 
 ## The Transy Language
 
-The language itself was only ever verbally described to the students in class. There were certain specifics that everybody needed to meet, but overall each compiler implemented some aspects differently than other. It is a loosely typed, procedural language that it Touring Complete. It gets complicated as there is a goto command, but it is fairly easy to learn and use
+The language itself was only ever verbally described to the students in class. There were certain specifics that everybody needed to meet, but otherwise the implementations were all individual. It is a loosely typed, procedural language that it Touring Complete. The syntax for the language can most easily be compared to BASIC. It is fairly easy to learn and use, but be careful with those `goto` commands.
 
 The type system:
 - ID = variable or constant
 - Literal = "string of words" or $literalVariable
 - Array = An aggregate data type for IDs
 
-## The Commands
+See the project page for my [Transy Compiler & Executor](/transy-compiler-executor) for more information.
+
+### The Commands
 
 #### read
 
