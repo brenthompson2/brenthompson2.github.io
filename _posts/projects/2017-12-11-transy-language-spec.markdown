@@ -6,8 +6,8 @@ date:   2017-12-11 7:00:00 -0400
 permalink: /transy-language-spec
 categories: C++
 excerpt: The Transy Language defined for the Compiler Construction course during the fall of 2017 at Transylvania University
-image: /assets/img/project-images/awesome-checkin/checkin-screensaver.png
-imageAlt: Ionic Logo
+image: /assets/img/project-images/transy-compiler-executor.png
+imageAlt: Console During Use
 ---
 
 ## The Transy Language
