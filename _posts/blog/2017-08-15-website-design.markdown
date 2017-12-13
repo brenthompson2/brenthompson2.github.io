@@ -14,7 +14,7 @@ To create this website I used [Jekyll](https://jekyllrb.com) and hosted it using
 
 I learned how to use Jekyll through a [Udemy course created by AwesomeInc](https://www.udemy.com/jekyll-and-github-pages/). With that great video series, the [Jekyll docs](https://jekyllrb.com/docs/home/), and a lot of trial and error, developing my own website went fairly smooth and straightforward.
 
-## Getting started with Jekyll
+### Getting started with Jekyll
 
 Installing Jekyll was super easy on my Ubuntu 16.04 machine. I just followed the instructions from [this tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-jekyll-development-site-on-ubuntu-16-04). These are the notes I took from there on installing and creating my first website:
 
@@ -38,7 +38,7 @@ Installing Jekyll was super easy on my Ubuntu 16.04 machine. I just followed the
 >		- access the site at the URL provided in the terminal
 >			- http:___.0.0.1:4000
 
-## Choosing a theme
+### Choosing a theme
 
 One of the best parts about Jekyll is how easy it is to get up and running with a beautiful looking theme. There is a huge list of good ones at [Jekyll Themes](http://jekyllthemes.org/). I chose to use [Particle by Nathan Randecker](http://jekyllthemes.org/themes/particle/) because I thought that the content was smoothly laid out and that the header was professional yet tech-y and captivating. Check out the simple template at [Particle Demo Website](https://nrandecker.github.io/particle/).
 
@@ -58,7 +58,7 @@ Font Awesome is a super easy to use, yet massive, library of icons / fonts that 
 
 Devicon is a set of icons representing programming languages, design tools, development software, and more. This is what the Particle Theme used for all of the icons in the Expertise Section. Unfortunately I couldn't find a whole lot of logos for developer tools that I actually used. I would have liked to seen: Unity Game Development, Jekyll, JUCE Audio Framework, Music Production Software (Ableton, ProTools), Video Production Software (Premiere Pro, iMovie)
 
-## Customization
+### Customization
 
 Customizing the theme has really been a never ending task as my website grows more and more. It was easy to get converted over from the basic template into a personalized version, which included changing all of the titles, descriptions, links, and paragraphs.
 
@@ -66,7 +66,7 @@ The first larger customization I did was to change the icon for a featured proje
 
 Then I went ahead and created another paragraph like "My Expertise", except this time as a more personal "About Me" section. I wanted to give the website a little more personality, so I used skeleton to split that row into two separate columns <code><div class="six columns"></code> and embedded my latest instagram post.
 
-## Creating Posts
+### Creating Posts
 
 With Jekyll and their great [Docs](https://jekyllrb.com/docs/posts/), creating posts was super easy!
 
@@ -146,7 +146,7 @@ In the end I created a <code>_includes/recent-posts.html</code> section included
 
 
 
-## Conclusion
+### Conclusion
 
 Creating static webpages with Jekyll is incredibly easy to do, and I highly recommend giving it a try. My website still has a lot more work to be done on it, and with the power of Jekyll I can't wait to see what else it has in store! At this point my number one priorities are creating a navigation header bar, making a projects page, and creating more posts. It would also be cool if I could get the pictures and texts to got back to switching sides like in the demo project. I don't know what I changed but now it is always text first and then the picture
 

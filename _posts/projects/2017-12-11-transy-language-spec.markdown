@@ -10,7 +10,7 @@ image: /assets/img/transy-logo-bat.png
 imageAlt: Transylvania Raf Logo
 ---
 
-## The Transy Language
+### The Transy Language
 
 The language itself was only ever verbally described to the students in class. There were certain specifics that everybody needed to meet, but otherwise the implementations were all individual. It is a loosely typed, procedural language that it Touring Complete. The syntax for the language can most easily be compared to BASIC. It is fairly easy to learn and use, but be careful with those `goto` commands.
 

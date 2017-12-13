@@ -169,6 +169,8 @@ This is the main executor class created in Executor.cpp & Executor.h.
 	MAX_NUM_FLAGS 7
 	MAX_NUM_LINES_IN_TRANSY_PROGRAM 1000
 
+### Executor Components
+
 #### EFileManager
 
 The main file manager for the executor

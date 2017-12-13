@@ -14,11 +14,11 @@ image2Alt: Standing on the Shoulders of Giants
 
 When I first arrived at Awesome Inc I had only the slightest experience with web development technologies. After producing some decent updates on a few of their different websites, I was thrown my own big project to tackle. I was asked to use the Ionic hybrid mobile framework to develop a mobile application. Getting started was quite the process, as I was still somewhat new to web development and struggling to understand the big complex interconnectedness of advanced technology that was Ionic. It wasn't until really breaking down the theory behind what all was going on that I was able to jump into the nuts and bolts of development.
 
-## What is a Framework?
+### What is a Framework?
 
 Software and Web Frameworks are basically a layer of abstraction that provide a standard way to build and deploy applications. They are universal, reusable environments that enable developers to skip past the more complex lower level details of providing a working system and instead allows them to devote their time to larger requirements. The goal of a framework is to provide a one-size-fits-all solution to the basic problems, and may include programs, compilers, code libraries, tool sets, and API's that bring together all of the components and enable development.
 
-### The Ionic 3 Framework
+##### The Ionic 3 Framework
 
 <img src="{{ site.url }}{{ page.image2 }}" alt="{{ page.image2Alt }}">
 
@@ -29,7 +29,7 @@ Most notably, the Ionic Framework provides these tools:
 - Application UI elements that wrap to each native platform
 - An online application to test and manage applications
 
-### Other Frameworks Involved
+##### Other Frameworks Involved
 
 1) [Cordova](https://cordova.apache.org) by Apache
 
@@ -47,7 +47,7 @@ Most notably, the Ionic Framework provides these tools:
 
 	This is the lightweight and efficient JavaScript runtime that uses an event-driven, non-blocking I/O model. Its package ecosystem, npm, is the largest manager of open source libraries in the world. It is necessary to install node.js and npm before Ionic.
 
-## What are all these languages?
+### What are all these languages?
 
 1) TypeScript <i class="devicon-typescript-plain colored"></i>
 
@@ -92,7 +92,7 @@ Most notably, the Ionic Framework provides these tools:
 	- official implementation open-source and coded in ruby, although other implementations exist (PHP, C w/ libSass, Java w/ JSass & Vaadin)
 	- Provides: variables, nesting, mixins, and inheritance
 
-## The Methodologies
+### The Methodologies
 
 1) Hybrid Mobile App Development
 

@@ -14,22 +14,22 @@ The [Ideal Image Slider](https://jekylltools.github.io/jekyll-ideal-image-slider
 
 <strong>Warning: I no longer recommend the Ideal Image Slider as a method of displaying posts as it is pretty much broken when viewed on mobile. I am now using the [Flexslider](http://flexslider.woothemes.com/). A new post will be written about the topic in the near future. In the meantime, my website's [github repository](https://github.com/brenthompson2/brenthompson2.github.io) currently shows how this is done. The process is just about the exact same as with the Flexslider.</strong>
 
-## Implementing the Slider
+## **Implementing the Slider**
 
 The process of setting up the slider is not incredibly challenging. The steps basically break down into adding and linking to the css & javascript dependencies, creating the sliders, and including them within the site.
 
-### Step 1: Add the CSS & JS Files
+## Step 1: Add the CSS & JS Files
 
 There are 5 different files necessary to get the slider to run. I am using the versions directly behind the demo site, which are hosted in the [assets folder](https://github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages/assets) of the gh-pages branch.
 
-##### The CSS
+#### The CSS
 
 Create a new folder `/assets/css/slider/` and add the css, the themes folder, and the default theme
 
 	ideal-image-slider.css
 	/themes/default.css
 
-##### The JavaScript
+#### The JavaScript
 
 Create a new folder `/assets/js/slider/` and add the js behind the slider itself, the navigation bullets, and the captions
 
@@ -37,11 +37,11 @@ Create a new folder `/assets/js/slider/` and add the js behind the slider itself
 	iis-bullet-nav.js
 	iis-captions.js
 
-### Step 2: Add the Includes
+## Step 2: Add the Includes
 
 There are 3 different includes necessary to get the slider to run. Once again I am using the versions directly behind the demo site, which this time are hosted in the [includes folder](https://github.com/jekylltools/jekyll-ideal-image-slider-include/tree/gh-pages/_includes) of the github repository.
 
-##### The HTML
+#### The HTML
 
 In the `/_includes/` folder add the html behind the slider itself, the scripts, and the styles
 
@@ -49,21 +49,21 @@ In the `/_includes/` folder add the html behind the slider itself, the scripts, 
 	slider_scripts.html
 	slider_styles.html
 
-### Step 3: Link to the necessary files
+## Step 3: Link to the necessary files
 
-##### The StyleSheet
+#### The StyleSheet
 
 The main stylesheet needs to be included in the `<head>` of the page. For me, I included the code for linking to it in my `/_includes/head.html` which gets included in my main layout called `page.html`
 
 	{% raw %}{% include slider_styles.html %}{% endraw %}
 
-##### The Includes
+#### The Includes
 
 The scripts must be included at the very end of the `<body>` of the page. For me, I put the include in my main layout called `page.html` just before the google-analytics include
 
 	{% raw %}{% include slider_scripts.html %}{% endraw %}
 
-### Step 4: Create a Slider
+## Step 4: Create a Slider
 
 The settings behind each slider is loaded from the folder `/_data/`. Create one if the website doesn't already have it and add the file `sliders.yml`. Hopefully someday there will be a nice way to have the slider dynamically pull images, excerpts, etc from the front matter of the actual posts. However, in the meantime each slider must be statically defined in the yaml file. There are quite a few setting that can be manipulated, and the complete list can be found in the [READEME](https://github.com/Codeinwp/Ideal-Image-Slider-JS/blob/master/README.md) of the original slider.
 
@@ -97,9 +97,9 @@ The settings behind each slider is loaded from the folder `/_data/`. Create one 
 	    keyboardNav:
 	    previousNavSelector:
 
-### Step 5: Display the Slider
+## Step 5: Display the Slider
 
-##### Add the Front Matter
+#### Add the Front Matter
 
 In the front matter of pages that need a slider, the slider selectors must be added to the front matter of the page or layout
 
@@ -108,14 +108,14 @@ In the front matter of pages that need a slider, the slider selectors must be ad
 	  - posts_recent
 	---
 
-##### Include the Slider
+#### Include the Slider
 
 To implement the slider onto an actual page, just include it and specify which slider to display
 
 	{% raw %}{% include slider.html selector="posts_recent" %}{% endraw %}
 
 
-### Step 6 (Optional): Allow for indexed or archived sliders
+## Step 6 (Optional): Allow for indexed or archived sliders
 
 In order for the pages to load indexed or archived sliders the following front matter must be included. For example, if there are sliders within post excerpts, this front matter is necessary for them to display properly
 
@@ -123,6 +123,6 @@ In order for the pages to load indexed or archived sliders the following front m
 	image_sliders_load_all: true
 	---
 
-## Thats it!
+## **Thats it!**
 
 The ideal image slider is a rather simple slider to implement into jekyll and use all over. It has a whole bunch of settings and can easily be modified. If you have any problems implementing it feel free to contact me!
