@@ -4,7 +4,7 @@ title: An Introduction to the JUCE Framework
 author: Brendan Thompson
 date:   2017-08-13 2:30:00 -0400
 permalink: /juce-intro
-categories: JUCE-Audio
+categories: Audio
 excerpt: A simple introduction to the JUCE C++ Audio Development Framework
 image: /assets/img/post-images/juce-logo.png
 imageAlt: JUCE Logo
