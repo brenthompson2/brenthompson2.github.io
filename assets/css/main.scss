@@ -5,6 +5,7 @@
 // Contents:
 //  - Colors
 //  - Fonts
+//  - Reactive Window Size Mixins
 //  - Style For Body
 //  - Style For NavBar
 //  - Style For Footer
@@ -37,6 +38,32 @@ $cut: 768px;
 @import url('https://fonts.googleapis.com/css?family=Raleway:300'); // Paragraphs
 
 // =====================================
+// Reactive Window Size Mixins
+// =====================================
+
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$mobile-width: $tablet-width - 1;
+
+@mixin tablet {  /* 768-1023 */
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {  /* < 768 */
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin desktop { /* > 1024 */
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+// =====================================
 // Style For Body
 // =====================================
 
@@ -48,18 +75,22 @@ body {
   }
 }
 
+.hideOnMobile {
+  @include mobile {
+    display: none;
+  }
+}
+
 // =====================================
 // Style For NavBar
 // =====================================
 
 nav.primary {
-  // clear: both;
-  // overflow: hidden;
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-  height: 80px;
   background: $main;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  z-index: 99;
   img {
     margin-left: 20px;
     width: 100px;
@@ -67,36 +98,42 @@ nav.primary {
   }
   h1 {
     font-size: 30px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     margin-top: 30px;
     margin-left: 10%;
     position: fixed;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    @include mobile {
+      margin-left: 2%;
+    }
   }
 }
 
 nav.primary ul {
-  list-style-type: none;
-  float: right;
-  margin-top: 40px;
-  margin-right: 10%;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
+  float: right;
+  list-style-type: none;
+  margin-top: 35px;
+  margin-right: 10%;
+  @include mobile {
+    margin-right: 2%;
+  }
   li {
     position: relative;
     display: inline-block;
-    padding: 0px 0 10px 0;
+    padding: 0px;
     margin-left: 10px;
   }
   li:hover {
     border-bottom: 4px solid #e9e9e9;
   }
   a {
-    padding:5px;
     text-decoration: none;
     color: #fff;
+    padding:5px;
     -webkit-transition: border .5s ease-out;
   }
   a.hover {
@@ -110,14 +147,11 @@ nav.primary ul {
 // =====================================
 
 .footer {
+  color: #FFF;
   background: $main;
   padding: 10px 0;
   margin-top: 100px;
   text-align: center;
-  color: #FFF;
-  .love {
-    color: red;
-  }
   a {
     text-decoration: none;
     margin: 0;
@@ -136,9 +170,9 @@ nav.primary ul {
 // =====================================
 
 .home {
+  font-size: 60px;
   text-align: center;
   margin: 20px auto;
-  font-size: 60px;
   p {
     font-size: 18px;
     font-weight: 300;
@@ -202,10 +236,10 @@ nav.primary ul {
     font-family: 'Montserrat', sans-serif;
   }
   p {
-    text-align: justify;
     // text-indent: 50px;
     font-size: 16px;
     font-weight: 300;
+    text-align: justify;
     font-family: 'Raleway', sans-serif;
   }
   img {
