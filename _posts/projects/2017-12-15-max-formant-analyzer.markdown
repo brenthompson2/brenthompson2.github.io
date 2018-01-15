@@ -4,10 +4,12 @@ title: Max Formant Analyzer
 author: Brendan Thompson
 date:   2017-12-15 7:00:00 -0400
 permalink: /max-formant-analyzer
-categories: Audio
+categories: projects
+tags: Audio
 excerpt: These Formant Analysis, Synthesis, and filtering tools were created for the Music Cognition course during the fall of 2017 at Transylvania University
 image: /assets/img/transy-logo-bat.png
 imageAlt: Transylvania Raf Logo
+image-slider: /assets/img/project-images/slider-images/sine-wave-synth-slider.png
 ---
 
 ### Music Cognition

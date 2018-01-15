@@ -4,12 +4,14 @@ title: Introduction to the Ionic 3 Framework
 author: Brendan Thompson
 date:   2017-10-02 7:00:00 -0400
 permalink: /ionic-3
-categories: Ionic
+categories: blog
+tags: Ionic
 excerpt: An in depth introduction to the advanced software and concepts that come together to create the Ionic 3 hybrid mobile app development framework
 image: /assets/img/post-images/ionic-logo.png
 imageAlt: Ionic Logo
 image2: /assets/img/post-images/newton-giants.jpg
 image2Alt: Standing on the Shoulders of Giants
+image-slider: /assets/img/post-images/slider-images/ionic-logo-slider.png
 ---
 
 When I first arrived at Awesome Inc I had only the slightest experience with web development technologies. After producing some decent updates on a few of their different websites, I was thrown my own big project to tackle. I was asked to use the Ionic hybrid mobile framework to develop a mobile application. Getting started was quite the process, as I was still somewhat new to web development and struggling to understand the big complex interconnectedness of advanced technology that was Ionic. It wasn't until really breaking down the theory behind what all was going on that I was able to jump into the nuts and bolts of development.

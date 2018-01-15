@@ -4,10 +4,8 @@
 	    <h1>Categories</h1>
 	</div>
 
-
 	{% for category in site.categories %}
 		{% assign category_name = category | first %}
-
 
 			<div class="post-display">
 				<h2 id="{{ category_name | slugify }}">{{ category_name }}</h2>
@@ -22,7 +20,7 @@
 			      	</div>
 
 			      	<div class="six columns">
-			        	<img alt="{{ post.imageAlt }}" src="{{ site.url }}{{ post.image }}">
+			        	<img alt="{{ post.imageAlt }}" src="{{ site.url }}{{ post.image-slider }}">
 			      	</div>
 			    </li>
 				{% endfor %}

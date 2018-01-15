@@ -4,10 +4,12 @@ title: Transy Language Specification
 author: Brendan Thompson
 date:   2017-12-11 7:00:00 -0400
 permalink: /transy-language-spec
-categories: C++
+categories: projects
+tags: C++
 excerpt: The Transy Language defined for the Compiler Construction course during the fall of 2017 at Transylvania University
 image: /assets/img/transy-logo-bat.png
 imageAlt: Transylvania Raf Logo
+image-slider: /assets/img/project-images/slider-images/transy-logo-bat-slider.png
 ---
 
 ### The Transy Language

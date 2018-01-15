@@ -4,7 +4,8 @@ title: My First Post!
 author: Brendan Thompson
 date:   2017-08-11 16:30:02 -0400
 permalink: /first-post
-categories: Testing
+categories: blog
+tags: Testing
 excerpt: My first ever post on my new website
 published: false # jekyll serve --unpublished to view
 image: /assets/img/post-images/mountains.jpg

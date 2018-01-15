@@ -4,10 +4,12 @@ title: Creating my own website
 author: Brendan Thompson
 date:   2017-08-15 2:30:00 -0400
 permalink: /website-design
-categories: Web-Design
+categories: blog
+tags: Web-Design
 excerpt: Check out this brief description of getting started with Jekyll and getting my first website off the ground
 image: /assets/img/post-images/website-header-pic.png
 imageAlt: Jekyll Logo
+image-slider: /assets/img/post-images/slider-images/website-header-pic-slider.png
 ---
 
 To create this website I used [Jekyll](https://jekyllrb.com) and hosted it using [GitHub Pages](https://pages.github.com). Jekyll is a framework used to quickly develop lightweight static webpages to display content. The individual files are all created with Markdown, Liquid Templates, YAML Front Matter, HTML, or CSS. Jekyll is made to make blogging super easy by managing permalinks, categories, pages, and posts. It is also super easy to get up and running with custom themes.

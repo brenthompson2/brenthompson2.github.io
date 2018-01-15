@@ -257,6 +257,23 @@ nav.primary ul {
   height: 55px;
 }
 
+.flex-caption {
+  font-size: 16px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+
+  width: 100%;
+  padding: 2%;
+
+  background: $main;
+  border-radius: 5px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
 .projects-display {
   margin: 40px auto;
   img {

@@ -4,7 +4,8 @@ title: Integrating Slack In Ionic
 author: Brendan Thompson
 date:   2017-09-07 2:30:00 -0400
 permalink: /integrating-slack
-categories: Ionic
+categories: blog
+tags: Ionic
 excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
 image: /assets/img/post-images/slackapi-angularjs.jpg
 imageAlt: Slack and Angular
@@ -12,6 +13,7 @@ image2: /assets/img/post-images/slack-logo.png
 image2Alt: Slack Logo
 image3: /assets/img/post-images/ionic-logo.png
 image3Alt: Ionic Logo
+image-slider: /assets/img/post-images/slider-images/slackapi-angularjs-slider.jpg
 ---
 
 For my recent internship at Awesome Inc I have been doing some hybrid mobile app development using the Ionic framework. The goal is to create a mobile app to constantly have running on an iPad that allows guests to the facility to check in. The app then sends a message to the appropriate person via [Slack](https://slack.com) regarding the arrival of the guest. Now that I have the messaging feature officially integrated, I just have a little more work to do until an official demo version is ready for testing.

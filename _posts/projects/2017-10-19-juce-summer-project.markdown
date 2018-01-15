@@ -4,10 +4,12 @@ title: JUCE Summer Summary
 author: Brendan Thompson
 date:   2017-10-19 7:30:00 -0400
 permalink: /juce-summer-project
-categories: Audio
+categories: projects
+tags: Audio
 excerpt: The summary of work from my experience developing JUCE Audio synthesizers during the summer of 2017.
 image: /assets/img/project-images/juce-harmonic-synth.png
 imageAlt: JUCE Synth
+image-slider: /assets/img/project-images/slider-images/juce-harmonic-synth-slider.png
 ---
 
 ### Overview

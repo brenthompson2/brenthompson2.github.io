@@ -4,10 +4,12 @@ title: Awesome Check In
 author: Brendan Thompson
 date:   2017-11-26 7:00:00 -0400
 permalink: /awesome-check-in
-categories: Ionic
+categories: projects
+tags: Ionic
 excerpt: The Awesome Check In mobile application is used by Awesome Inc to check in their guests and alert the appropriate team members
 image: /assets/img/project-images/awesome-checkin/checkin-screensaver.png
 imageAlt: Ionic Logo
+image-slider: /assets/img/project-images/slider-images/checkin-screensaver-slider.png
 ---
 
 ### The App

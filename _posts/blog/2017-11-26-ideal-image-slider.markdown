@@ -4,10 +4,12 @@ title: Ideal Image Slider in Jekyll
 author: Brendan Thompson
 date:   2017-11-26 7:00:00 -0400
 permalink: /ideal-image-slider
-categories: Web-Design
+categories: blog
+tags: Web-Design
 excerpt: Implementing the Ideal Image Slider in Jekyll in order to display posts and projects
 image: /assets/img/post-images/jekyll-logo.png
 imageAlt: Jekyll Logo
+image-slider: /assets/img/post-images/slider-images/jekyll-logo-slider.png
 ---
 
 The [Ideal Image Slider](https://jekylltools.github.io/jekyll-ideal-image-slider-include/examples/) is an open source content slider by [CodeinWP](https://github.com/Codeinwp) that was made for wordpress sites. It was [originally designed](https://github.com/Codeinwp/Ideal-Image-Slider-JS) with the intensions to "create a slider which has just the right amount of features, with no bloat and be easy to extend so that more features can be added as extensions". It was ported to Jekyll by [jekylltools](https://github.com/jekylltools) as an [include](https://github.com/jekylltools/jekyll-ideal-image-slider-include), which is where I learned how to use it. In this post I break down the individual steps of implementing it into a jekyll site. There is also a [ruby plugin version](https://github.com/jekylltools/jekyll-ideal-image-slider) that uses liquid tags but it is not compatible with Github Pages and therefore I have not yet used it.

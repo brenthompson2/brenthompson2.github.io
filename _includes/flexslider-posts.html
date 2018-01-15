@@ -1,0 +1,22 @@
+<div class="row justify-content-center">
+	<div class="col-12">
+
+	  	<div class="home-title">
+	    	<h3>Recent Posts</h3>
+	  	</div>
+
+		<div class="flexslider">
+			<ul class="slides">
+		  		{% for page in site.categories.blog %}
+		  		<li data-thumb="{{ page.image-slider }}">
+		  			<a href="{{ site.url}}{{ page.permalink }}">
+			    		<img src="{{ page.image-slider }}">
+			    		<p class="flex-caption">{{ page.excerpt }}</p>
+			    	</a>
+		 		</li>
+		  		{% endfor %}
+			</ul>
+		</div>
+		<p style="text-align: center"><a href="{{ site.url }}/posts-page">See All Posts</a></p>
+	</div>
+</div>
