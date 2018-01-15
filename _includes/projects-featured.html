@@ -1,9 +1,31 @@
 <div class="container">
 
     <div class="home-title">
-        <h3>Featured Projects</h3>
+        <h1>Featured Projects</h1>
     </div>
 
+      <ul class="post-display">
+      {% for page in site.categories.projects %}
+          <li class="row">
+              <div class="six columns">
+              <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
+              <p>{{ page.excerpt }}</p>
+              </div>
+
+              <div class="six columns">
+                <img alt="{{ page.imageAlt }}" src="{{ site.url }}{{ page.image-slider }}">
+              </div>
+          </li>
+        {% endfor %}
+      </ul>
+
+</div>
+
+<!-- <div class="container">
+
+    <div class="home-title">
+        <h3>Featured Projects</h3>
+    </div>
 
     <div class="row projects-display">
         <div class="six columns">
@@ -138,3 +160,4 @@
     </div>
 
 </div>
+ -->
