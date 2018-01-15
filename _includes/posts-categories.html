@@ -1,18 +1,19 @@
-
 <div class="container">
 	<div class="home-title">
-	    <h1>Categories</h1>
+	    <h1>Post Categories</h1>
 	</div>
 
-	{% for category in site.categories %}
-		{% assign category_name = category | first %}
+		{% for tag in site.tags %}
+			{% assign tag_name = tag | first %}
+			{% assign posts = tag | last %}
 
 			<div class="post-display">
-				<h2 id="{{ category_name | slugify }}">{{ category_name }}</h2>
+				<h2 id="{{ tag_name | slugify }}">{{ tag_name }}</h2>
 			</div>
 
 			<ul class="post-display">
-				{% for post in site.categories[category_name] %}
+				{% for post in site.posts %}
+				{% if post.tags contains tag_name %}
 			    <li class="row">
 			      	<div class="six columns">
 			    	 	<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
@@ -23,8 +24,9 @@
 			        	<img alt="{{ post.imageAlt }}" src="{{ site.url }}{{ post.image-slider }}">
 			      	</div>
 			    </li>
+			    {% endif %}
 				{% endfor %}
 			</ul>
 
-	{% endfor %}
+		{% endfor %}
 </div>
