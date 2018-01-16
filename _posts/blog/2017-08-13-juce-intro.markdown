@@ -36,6 +36,8 @@ There are tons of great tutorials out there that are great for getting started w
 
 ## My Current Standing
 
+**[Edit 10/19/17]: See the [JUCE Summer Summary](/juce-summer-project) project page for the updated current standing**
+
 As of this point I am struggling to get the Audio Processing classes to communicate together. Basically, there are a series of objects that are required to start creating advanced applications and smoothly communicating data between the UI and the Audio thread:
 - AudioDeviceManager: This is the main object that takes in audio & midi data, sends it to its children, and the outputs it again. In an Audio Application, one of these is a member of the MainContentComponent as it inherits from the AudioAppComponent.
 - AudioProcessorPlayer: A much less important class, this is an AudioIODeviceCallback, which must be passed as a pointer to the ADM
