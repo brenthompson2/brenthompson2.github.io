@@ -60,7 +60,7 @@ The app itself was created using the open source [Ionic 3](https://ionicframewor
 	</div>
 	<div class="six columns">
 		<img src="/assets/img/project-images/awesome-checkin/checkin-idle.png" alt="Confirm Page">
-		<!-- ![Idle Timer]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-idle.png)--> -->
+		<!-- ![Idle Timer]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-idle.png)-->
 	</div>
 </div>
 {% endraw %}
