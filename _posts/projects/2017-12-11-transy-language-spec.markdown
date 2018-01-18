@@ -109,16 +109,6 @@ Manipulates the runnderVariable by incrementAmount, based off the last loop enco
 		a = a + runnerVariable
 	loop-end
 
-#### loop-end
-
-Manipulates the runnderVariable by incrementAmount, based off the last loop encountered by the executor. Then it checks the conditional of that loop. If it succeeds, the program begins executing at the first line in the loop. If it fails, the program continues executing at the next line after loop-end
-
-**example:**
-
-	loop runnerVariable, startIndex, endIndex, IncrementAmount
-		a = a + runnerVariable
-	loop-end
-
 #### ifa
 
 Jumps to one of the line labels specified based on whether the supplied value is negative, zero, or positive
@@ -144,7 +134,7 @@ Does not do anything
 
 	nop
 
-#### nop
+#### listo
 
 Prints out the object code for the current program
 
