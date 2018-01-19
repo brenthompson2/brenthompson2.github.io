@@ -2,7 +2,7 @@
 $(window).load(function() {
     $('.flexslider').flexslider({
     animation: "fade",
-    controlNav: true,
+    // controlNav: "thumbnails",
     directionNav: true,
     slideshowSpeed: 5000,
     animationSpeed: 600,
