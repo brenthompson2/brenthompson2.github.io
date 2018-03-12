@@ -7,6 +7,8 @@ permalink: /integrating-slack
 categories: blog
 tags: Ionic
 excerpt: Follow along as I describe how to send an Http post request in Angular 2 as is implemented in Ionic hybrid mobile app development
+github: https://github.com/ainc/Awesome-Check-In/blob/master/src/pages/confirm/confirm.ts
+
 image: /assets/img/post-images/slackapi-angularjs.jpg
 imageAlt: Slack and Angular
 image2: /assets/img/post-images/slack-logo.png

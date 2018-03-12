@@ -7,6 +7,8 @@ permalink: /juce-summer-project
 categories: projects
 tags: Audio
 excerpt: The summary of work from my experience developing JUCE Audio synthesizers during the summer of 2017.
+github: https://github.com/brenthompson2/JUCE-Summer-Project
+
 image: /assets/img/project-images/juce-harmonic-synth.png
 imageAlt: JUCE Synth
 image-slider: /assets/img/project-images/slider-images/juce-harmonic-synth-slider.png

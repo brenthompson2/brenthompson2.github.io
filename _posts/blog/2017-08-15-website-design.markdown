@@ -7,6 +7,8 @@ permalink: /website-design
 categories: blog
 tags: Web-Design
 excerpt: Check out this brief description of getting started with Jekyll and getting my first website off the ground
+github: https://github.com/brenthompson2/brenthompson2.github.io
+
 image: /assets/img/post-images/website-header-pic.png
 imageAlt: Jekyll Logo
 image-slider: /assets/img/post-images/slider-images/website-header-pic-slider.png

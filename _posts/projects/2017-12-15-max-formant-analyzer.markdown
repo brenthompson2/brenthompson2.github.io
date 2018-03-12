@@ -7,6 +7,8 @@ permalink: /max-formant-analyzer
 categories: projects
 tags: Audio
 excerpt: These Formant Analysis, Synthesis, and filtering tools were created for the Music Cognition course during the fall of 2017 at Transylvania University
+github: https://github.com/brenthompson2/Formant-Analysis
+
 image: /assets/img/transy-logo-bat.png
 imageAlt: Transylvania Raf Logo
 image-slider: /assets/img/project-images/slider-images/sine-wave-synth-slider.png

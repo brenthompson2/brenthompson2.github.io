@@ -3,15 +3,50 @@ layout: default
 ---
 
 <div class="container">
-    <div class="post-header">
-		<h1>{{ page.title }}</h1>
-	    <time datetime="{{ page.date | date: "%-d %b %y" }}">{{ page.date | date: "%-d %b %y" }}</time>
-	    <br/>
+    <div class="row post-layout-header">
 
-		<img src="{{ site.url }}{{ page.image }}" alt="{{ page.imageAlt }}">
+    	<!-- Header Image -->
+    	<div class="six columns post-layout-header-image">
+			<img src="{{ site.url }}{{ page.image-slider }}" alt="{{ page.imageAlt }}">
+		</div>
+
+		<!-- Header Info -->
+    	<div class="six columns post-layout-header-info">
+
+    		<!-- General Info -->
+    		<h1>{{ page.title }}</h1>
+    		<p>{{ page.excerpt }}</p>
+    		<p>{{ page.author }}</p>
+			<p><time datetime="{{ page.date | date: "%-d %b %y" }}">{{ page.date | date: "%-d %b %y" }}</time></p>
+
+			<!-- Tags -->
+			<p>Tags:
+			{% for category in page.categories %}
+			{{ category }}
+			{% endfor %}
+
+			{% for tag in page.tags %}
+			{{ tag }}
+			{% endfor %}
+			</p>
+
+			<!-- Github Link -->
+			{% if page.github %}
+			<a class="post-layout-link" href="{{ page.github }}">GitHub</a>
+
+			<a aria-label="GitHub Repo" target="_blank" href="{{ page.github }}"><i class="icon fa fa-github-square" aria-hidden="true"></i></a>
+			{% endif %}
+
+			<!-- External Website -->
+			{% if page.external-website %}
+			<a class="post-layout-link" href="{{ page.external-website }}">Website</a>
+			{% endif %}
+		</div>
+
     </div>
 
-    <div class="post-content">
+    <!-- Post Content -->
+    <div class="post-layout-content">
 	    {{ content }}
 	</div>
 

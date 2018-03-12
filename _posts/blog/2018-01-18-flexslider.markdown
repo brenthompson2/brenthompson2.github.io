@@ -7,6 +7,8 @@ permalink: /flexslider
 categories: blog
 tags: Web-Design
 excerpt: Implementing Flexslider in Jekyll in order to display posts and projects
+github: https://github.com/brenthompson2/brenthompson2.github.io/blob/master/_includes/displays/posts-flexslider.html
+
 image: /assets/img/post-images/jekyll-logo.png
 imageAlt: Jekyll Logo
 image-slider: /assets/img/post-images/slider-images/jekyll-logo-slider.png
@@ -27,7 +29,7 @@ After implementing the [Ideal Image Slider](https://jekylltools.github.io/jekyll
 		<p>There are only 5 different dependency files necessary to get the slider to run and they can all be found in the folder downloaded from the <a href="https://woocommerce.com/flexslider/">official WooCommerce Flexslider page</a>.</p>
 	</div>
 	<div class="six columns">
-		{% include flexslider-posts.html %}
+		{% include displays/posts-flexslider.html %}
 	</div>
 </div>
 

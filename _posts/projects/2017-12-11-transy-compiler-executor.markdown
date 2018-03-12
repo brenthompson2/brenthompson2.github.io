@@ -7,6 +7,8 @@ permalink: /transy-compiler-executor
 categories: projects
 tags: C++
 excerpt: The Transy Language Compiler and Executor was created for the Compiler Construction course during the fall of 2017 at Transylvania University
+github: https://github.com/brenthompson2/Compiler-Constructin
+
 image: /assets/img/transy-logo-bat.png
 imageAlt: Transylvania Raf Logo
 image-slider: /assets/img/project-images/slider-images/transy-logo-bat-slider.png
