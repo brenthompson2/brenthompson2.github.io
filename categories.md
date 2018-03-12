@@ -6,5 +6,5 @@ permalink: /Categories
 ---
 
 <div class="container">
-	{% include posts-categories.html %}
+	{% include displays/posts-basic-tags.html %}
 </div>

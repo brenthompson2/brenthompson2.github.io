@@ -1,27 +1,27 @@
 ---
 layout: page
 image_sliders:
-  - posts_recent
-  - projects_featured
+    - posts_recent
+    - projects_featured
 ---
 
-    {% include header.html %}
+{% include header.html %}
 
-    <section id="about">
-      {% include about.html %}
-    </section>
+<section id="about">
+    {% include about.html %}
+</section>
 
-    <div class="container row">
-      <div class="six columns">
+<div class="container row">
+    <div class="six columns">
         <section id="projects-featured">
-          {% include flexslider-projects.html %}
+        {% include displays/projects-flexslider.html %}
         </section>
-      </div>
-
-      <div class="six columns">
-        <section id="posts-recent">
-          {% include flexslider-posts.html %}
-        </section>
-      </div>
-
     </div>
+
+    <div class="six columns">
+        <section id="posts-recent">
+        {% include displays/posts-flexslider.html %}
+        </section>
+    </div>
+
+</div>

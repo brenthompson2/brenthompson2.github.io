@@ -1,0 +1,29 @@
+<!--
+    Projects Basic Recent Display
+    Brendan Thompson
+
+    A basic Projects display page with images and texts sorted chronologically
+ -->
+
+ <div class="container">
+
+    <div class="home-title">
+        <h1>All Projects</h1>
+    </div>
+
+    <ul class="post-display">
+        {% for page in site.categories.projects %}
+        <li class="row">
+            <div class="six columns">
+                <h4><a href="{{ page.url }}">{{ page.title }}   </a></h4>
+                <p>{{ page.excerpt }}</p>
+            </div>
+
+            <div class="six columns">
+                <img alt="{{ page.imageAlt }}" src="{{ site.url }}{{ page.image-slider }}">
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>

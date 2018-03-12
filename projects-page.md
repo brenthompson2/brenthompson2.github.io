@@ -1,12 +1,10 @@
 ---
-title: Projects
+title: All Projects
 layout: default
-excerpt: "All of My Projects"
+excerpt: "Brendan Thompson's Projects"
 permalink: /projects-page
-image_sliders:
-  - projects_featured
 ---
 
 <div class="container">
-	{% include projects-featured.html %}
+	{% include displays/projects-reveal.html %}
 </div>

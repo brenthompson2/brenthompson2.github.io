@@ -1,12 +1,10 @@
 ---
-title: Posts
+title: All Posts
 layout: default
-excerpt: "All of My Posts"
+excerpt: "Brendan Thompson's Posts"
 permalink: /posts-page
-image_sliders:
-  - posts_recent
 ---
 
 <div class="container">
-	{% include posts-categories.html %}
+	{% include displays/posts-basic-tags.html %}
 </div>

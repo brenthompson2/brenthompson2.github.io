@@ -1,11 +1,18 @@
-<div>
+<!--
+    Projects Flexslider Display
+    Brendan Thompson
+
+    A Flexslider displaying Projects with images and captions sorted chronologically
+ -->
+
+ <div>
   	<div class="home-title">
-    	<h3>Recent Posts</h3>
+    	<h3>Featured Projects</h3>
   	</div>
 
 	<div class="flexslider">
 		<ul class="slides">
-	  		{% for page in site.categories.blog %}
+	  		{% for page in site.categories.projects %}
 	  		<li data-thumb="{{ page.image-slider }}">
 	  			<a href="{{ site.url}}{{ page.permalink }}">
 		    		<img src="{{ page.image-slider }}">
@@ -15,5 +22,5 @@
 	  		{% endfor %}
 		</ul>
 	</div>
-	<p style="text-align: center"><a href="{{ site.url }}/posts-page">See All Posts</a></p>
+	<p style="text-align: center"><a href="{{ site.url }}/projects-page">See All Projects</a></p>
 </div>
