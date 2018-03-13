@@ -150,22 +150,22 @@ nav.primary ul {
 // =====================================
 
 .footer {
-  color: #FFF;
-  background: $main;
-  padding: 10px 0;
-  margin-top: 100px;
-  text-align: center;
-  a {
-    text-decoration: none;
-    margin: 0;
     color: #FFF;
-    &:hover{
-      color: $sec;
+    background: $main;
+    padding: 10px 0;
+    margin-top: 100px;
+    text-align: center;
+    a {
+        text-decoration: none;
+        margin: 0;
+        color: #FFF;
+        &:hover{
+            color: $sec;
+        }
+        &:active {
+            color: $sec;
+        }
     }
-    &:active {
-      color: $sec;
-    }
-  }
 }
 
 .footer-heading {
@@ -219,43 +219,50 @@ nav.primary ul {
 // =====================================
 
 .home {
-  font-size: 60px;
-  text-align: center;
-  margin: 20px auto;
-  p {
-    font-size: 18px;
-    font-weight: 300;
-    font-family: 'Raleway', sans-serif;
-  }
-  h5{
-    font-family: 'Montserrat', sans-serif;
-  }
-  ul{
-    font-size:16px;
-    text-align:left;
-    font-family: 'Montserrat', sans-serif;
-  }
-  li {
-    font-size: 16px;
-    font-weight: 300;
-    font-family: 'Raleway', sans-serif;
-  }
-  dl{
-    font-size:18px;
-    text-align:left;
-    font-family: 'Montserrat', sans-serif;
-    li {
-      font-size: 16px;
+    font-size: 60px;
+    text-align: center;
+    margin: 20px auto;
+    p {
+        font-size: 18px;
+        font-weight: 300;
+        font-family: 'Raleway', sans-serif;
     }
-  }
-  @media only screen and (min-width: $cut) {
-    font-size: 75px;
-  }
+    h5{
+        font-family: 'Montserrat', sans-serif;
+    }
+    ul{
+        font-size:16px;
+        text-align:left;
+        font-family: 'Montserrat', sans-serif;
+    }
+    li {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Raleway', sans-serif;
+    }
+    dl{
+        font-size:18px;
+        text-align:left;
+        font-family: 'Montserrat', sans-serif;
+        li {
+            font-size: 16px;
+        }
+    }
+    @media only screen and (min-width: $cut) {
+        font-size: 75px;
+    }
 }
 
 .home-title {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    background: transparent url("/assets/img/design/header-line.png") repeat-x 0 60%;
+    h1, h2, h3 {
+        background: #fff;
+        display: inline-block;
+        padding-right: 12px;
+        padding-left: 12px;
+    }
 }
 
 // =====================================
@@ -534,6 +541,7 @@ nav.primary ul {
 }
 
 .reveal-display-description {
+  color: #fff;
   background: $main;
   text-align: center;
 
@@ -549,14 +557,12 @@ nav.primary ul {
 .reveal-display-title {
   font-size: 20px;
   font-weight: 400;
-  color: #fff;
   font-family: 'Montserrat', sans-serif;
 }
 
 .reveal-display-text {
   font-size: 16px;
   font-weight: 300;
-  color: #fff;
   font-family: 'Raleway', sans-serif;
 }
 
