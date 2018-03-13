@@ -4,7 +4,7 @@ title: Transy Language Specification
 author: Brendan Thompson
 date:   2017-12-11 7:00:00 -0400
 permalink: /transy-language-spec
-categories: projects
+categories: blog
 tags: C++
 excerpt: The Transy Language defined for the Compiler Construction course during the fall of 2017 at Transylvania University
 github: https://github.com/brenthompson2/Compiler-Constructin

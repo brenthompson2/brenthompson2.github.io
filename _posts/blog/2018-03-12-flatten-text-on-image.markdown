@@ -18,7 +18,7 @@ image-slider: /assets/img/post-images/slider-images/ionic-logo-slider.png
 In order to develop an Ionic application for a client I had to learn how to overlay text onto an image and then flatten it into one new image that the user could share. I spent a ton of time researching this and could not find any real good posts where this was done in Ionic or any other web technology. Luckily a friend of mine recommended that I check out the native HTML Canvas element which is able to handle the task quite nicely.
 
 
-## **Flattening Text Onto an Image**
+# Flattening Text Onto an Image
 
 The HTML Canvas element makes this whole process fairly straightforward. Basically the markup needs a `canvas` element to do the creation and an `img` element to display the flattened result. All of the hard work is done in the TypeScript.
 
@@ -150,6 +150,6 @@ Once the canvas is drawn successfully simply set the `finalImage` member variabl
 	this.finalImage = this.theCanvas.toDataURL();
 
 
-## All Done!
+# All Done!
 
 Flattening text onto an image is really a rather straightforward process. Basically just connect to the canvas element from the interface template, get the context of it in order to draw the image and the text, and once it is ready just save the canvas out to an image. If you have any questions feel free to contact me. Also, there are a lot of helpful basic Canvas resource online. Good luck!

@@ -5,41 +5,27 @@
     A project display page where hovering over the image reveals the text
  -->
 
-<div class="container">
+<div class="home-title">
+    <h1>All Projects</h1>
+</div>
 
-    <div class="home-title">
-        <h1>All Projects</h1>
+<div class="row reveal-display">
+    <div class="five columns reveal-display-item"></div>
+    <div class="five columns reveal-display-item"></div>
+
+    {% for page in site.categories.projects %}
+    <div class="five columns reveal-display-item">
+
+        <img class="reveal-display-image" alt="{{ page.imageAlt }}" src="{{ site.url }}{{ page.image-slider }}">
+
+        <a href="{{ site.url }}/{{ page.url }}">
+            <div class="reveal-display-description">
+                <h1 class="reveal-display-title">{{ page.title }}</h1>
+
+                <p class="reveal-display-text">{{ page.excerpt }}</p>
+            </div>
+        </a>
+
     </div>
-
-    <div class="row">
-        {% for page in site.categories.projects %}
-        <div class="four columns reveal-display">
-
-                <img class="reveal-display-image" alt="{{ page.imageAlt }}" src="{{ site.url }}{{ page.image-slider }}">
-
-            <a href="{{ site.url }}/{{ page.url }}">
-                <div class="reveal-display-description">
-                    <h1 class="reveal-display-title">{{ page.title }}</h1>
-
-                    <p class="reveal-display-text">{{ page.excerpt }}</p>
-
-                    <p><time datetime="{{ page.date | date: "%-d %b %y" }}">{{ page.date | date: "%-d %b %y" }}</time></p>
-
-                    <!-- Tags -->
-                    <p>Tags:
-                    {% for category in page.categories %}
-                    {{ category }}
-                    {% endfor %}
-
-                    {% for tag in page.tags %}
-                    {{ tag }}
-                    {% endfor %}
-                    </p>
-                </div>
-
-            </a>
-        </div>
-        {% endfor %}
-    </div>
-
+    {% endfor %}
 </div>
