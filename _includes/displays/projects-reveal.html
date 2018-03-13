@@ -22,6 +22,19 @@
                     <h1 class="reveal-display-title">{{ page.title }}</h1>
 
                     <p class="reveal-display-text">{{ page.excerpt }}</p>
+
+                    <p><time datetime="{{ page.date | date: "%-d %b %y" }}">{{ page.date | date: "%-d %b %y" }}</time></p>
+
+                    <!-- Tags -->
+                    <p>Tags:
+                    {% for category in page.categories %}
+                    {{ category }}
+                    {% endfor %}
+
+                    {% for tag in page.tags %}
+                    {{ tag }}
+                    {% endfor %}
+                    </p>
                 </div>
 
             </a>
