@@ -2,7 +2,7 @@
 title: All Projects
 layout: default
 excerpt: "Brendan Thompson's Projects"
-permalink: /projects-page
+permalink: /projects
 ---
 
 <div class="container">

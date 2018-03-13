@@ -1,8 +1,8 @@
 ---
-title: Categories
+title: All Posts
 layout: default
-excerpt: "Category Index"
-permalink: /Categories
+excerpt: "Brendan Thompson's Posts"
+permalink: /posts
 ---
 
 <div class="container">
