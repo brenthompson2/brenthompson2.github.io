@@ -1,0 +1,21 @@
+<!--
+    Flexslider
+    Brendan Thompson
+
+    A Flexslider displaying images and captions from the page's metadata
+ -->
+
+ <div>
+	<div class="flexslider">
+		<ul class="slides">
+	  		{% for item in page.sliderItems %}
+	  		<li data-thumb="{{ item.image }}">
+	  			<a href="{{ site.url}}{{ item.image }}">
+		    		<img src="{{ item.image }}">
+		    		<p class="flex-caption">{{ item.caption }}</p>
+		    	</a>
+	 		</li>
+	  		{% endfor %}
+		</ul>
+	</div>
+</div>

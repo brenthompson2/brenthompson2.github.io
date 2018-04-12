@@ -14,9 +14,13 @@ imageAlt: Ionic Logo
 image-slider: /assets/img/project-images/slider-images/checkin-screensaver-slider.png
 ---
 
+### Check-In V2
+
+**After this post was written the Awesome Check-In application had a huge update. Take a look at the [new project page]({{ site.url }}/awesome-check-in-2) to see the all new interface and upgraded timer.**
+
 ### The App
 
-The first time that I entered Awesome Inc I went straight up to the first person I saw, introduced myself, and said that I was there for a meeting about an internship opportunity. The lady then got up and found the Director of Operations as I nervously waited on the couch just inside the front door. This may sound fine and dandy, but it was actually a huge problem that Awesome Inc had been dealing with. Guests to the facility would approach the person at the closest desk to the door and expect them to be some sort of secretary. However, as it is a co-working space, the people being disrupted more often than not were not even actually team members of Awesome Inc. Now, with Awesome Check In, guests are directed to an iPad where they select the program that they are interested in; supply their name, email, and reason for coming; and then select the team members that are expecting them. The app then sends a [Slack](slack.com) message to the designated Awesome Inc employee and directs them to sit down on the couch. Thanks to Awesome Check In, that person working hard in the Awesome Inc co-working space is no longer being interrupted by every guest to walk in the door.
+The first time that I entered [Awesome Inc](https://www.awesomeinc.org) I went straight up to the first person I saw, introduced myself, and said that I was there for a meeting about an internship opportunity. The lady then got up and found the Director of Operations as I nervously waited on the couch just inside the front door. This may sound fine and dandy, but it was actually a huge problem that Awesome Inc had been dealing with. Guests to the facility would approach the person at the closest desk to the door and expect them to be some sort of secretary. However, as it is a co-working space, the people being disrupted more often than not were not even actually team members of Awesome Inc. Now, with Awesome Check In, guests are directed to an iPad where they select the program that they are interested in; supply their name, email, and reason for coming; and then select the team members that are expecting them. The app then sends a [Slack](slack.com) message to the designated Awesome Inc employee and directs them to sit down on the couch. Thanks to Awesome Check In, that person working hard in the Awesome Inc co-working space is no longer being interrupted by every guest to walk in the door.
 
 ### The Ionic Framework
 
@@ -34,7 +38,6 @@ The app itself was created using the open source [Ionic 3](https://ionicframewor
 	</div>
 	<div class="six columns">
 		<img src="/assets/img/project-images/awesome-checkin/checkin-userinfo.png" alt="User Info Form">
-		<!-- ![User Info Form]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-userinfo.png) -->
 	</div>
 </div>
 {% endraw %}
@@ -43,7 +46,6 @@ The app itself was created using the open source [Ionic 3](https://ionicframewor
 <div class="row">
 	<div class="six columns">
 		<img src="/assets/img/project-images/awesome-checkin/checkin-confirm.png" alt="Confirm Page">
-		<!-- ![Confirm Page]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-confirm.png) -->
 	</div>
 	<div class="six columns">
 		<h5>Slack Messaging</h5>
@@ -61,8 +63,7 @@ The app itself was created using the open source [Ionic 3](https://ionicframewor
 		<p> A detailed blog post about implementing the timer has not yet been created as this feature is still under development. Getting it all working properly has been quite a process. Basically the timer is an injectable provider called timer where a new instance gets instantiated for every page and started/stopped/restarted when navigating between pages. The provider itself was based off the countdown timer by <a href="http://www.codingandclimbing.co.uk/blog/ionic-2-simple-countdown-timer" target="blank">Dave Shirman</a>. The hardest part has been managing the different instances, and it still currently has a bug that does not cause any real issues and for the most part goes unnoticed. Pressing the back button does not stop the last timer, and I am still testing two options for fixing the issue. One solution is to only create one instance of the timer and pass it between all of the pages while another fix is to manipulate the back-button functionality to also call a function on the page that pauses the timer.</p>
 	</div>
 	<div class="six columns">
-		<img src="/assets/img/project-images/awesome-checkin/checkin-idle.png" alt="Confirm Page">
-		<!-- ![Idle Timer]({{ site.url }}/assets/img/project-images/awesome-checkin/checkin-idle.png)-->
+		<img src="/assets/img/project-images/awesome-checkin/checkin-idle.png" alt="Idle Timer">
 	</div>
 </div>
 {% endraw %}
