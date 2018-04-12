@@ -8,7 +8,7 @@
  <div>
 	<div class="flexslider">
 		<ul class="slides">
-	  		{% for item in page.sliderItems %}
+	  		{% for item in page.sliderData %}
 	  		<li data-thumb="{{ item.image }}">
 	  			<a href="{{ site.url}}{{ item.image }}">
 		    		<img src="{{ item.image }}">
