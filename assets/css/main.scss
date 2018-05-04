@@ -25,7 +25,8 @@
 
 $main: #1a222c;
 $mainAnalogous1: rgba(27, 26, 44, 0.4);
-$mainAnalogous2: #1a2b2c;
+$mainAnalogous2: #1b1a2c;
+$mainAnalogous3: #1a2b2c;
 $mainTriadic1: rgba(26, 43, 44, 0.2);
 $mainTriadic2: rgba(26, 34, 44, 0.2);
 $mainTriadic3: rgba(26, 26, 44, 0.2);
@@ -75,6 +76,9 @@ body {
   font-family: 'Montserrat', sans-serif;
   p {
     font-family: 'Raleway', sans-serif;
+  }
+  a {
+    color: $main;
   }
 }
 
@@ -433,6 +437,15 @@ nav.primary ul {
   background: $main;
   border-radius: 10px;
   padding: 5%;
+  ul > li > a {
+    text-decoration: none;
+    hr {
+      background-color: #fff;
+      height: 1px;
+      padding: 0px;
+      margin: 10px;
+    }
+  }
   &:hover {
     background: #fff;
     border-color: $main;
@@ -445,19 +458,13 @@ nav.primary ul {
     -ms-animation-duration:2s;
     -o-animation-duration:2s;
     animation-duration:2s;
-    ul > li > a > p {
-      color: $main;
-    }
-    ul > li > a > hr {
-      background-color: $main;
-      height: 1px;
-    }
-  }
-  ul > li > a {
-    text-decoration: none;
-    hr {
-      background-color: #fff;
-      height: 1px;
+    ul > li > a {
+      p {
+        color: $main;
+      }
+      hr {
+        background-color: $main;
+      }
     }
   }
 }
@@ -471,9 +478,23 @@ nav.primary ul {
   color: #fff;
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  text-decoration: none;
-
   padding: none;
+
+  @include mobile {
+  }
+}
+
+.flex-caption-title {
+  font-size: 20px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: none;
+  margin-bottom: 0px;
+
+  @include mobile {
+
+  }
 }
 
 // =====================================
@@ -579,7 +600,6 @@ nav.primary ul {
     @include mobile {
         margin-left: 0px;
     }
-
 }
 
 .reveal-display-item {
