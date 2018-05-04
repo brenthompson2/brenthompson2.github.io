@@ -6,10 +6,6 @@
  -->
 
  <div>
-  	<div class="home-title">
-    	<h3>Recent Posts</h3>
-  	</div>
-
 	<div class="flexslider flex-design">
 		<ul class="slides">
 	  		{% for page in site.categories.blog %}
@@ -24,6 +20,4 @@
 	  		{% endfor %}
 		</ul>
 	</div>
-
-	<p class="button-style"><a href="{{ site.url }}/posts">See All Posts</a></p>
 </div>

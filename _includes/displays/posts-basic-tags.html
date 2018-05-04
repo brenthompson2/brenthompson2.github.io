@@ -8,10 +8,6 @@
 
  <div class="container">
 
-	<div class="home-title">
-	    <h1>Post Categories</h1>
-	</div>
-
 		{% for tag in site.tags %}
 			{% assign tag_name = tag | first %}
 			{% assign posts = tag | last %}
@@ -23,6 +19,7 @@
 			<ul class="post-display">
 				{% for post in site.posts %}
 				{% if post.tags contains tag_name %}
+				{% if post.categories contains "blog" %}
 			    <li class="row">
 			      	<div class="six columns">
 			    	 	<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
@@ -33,6 +30,7 @@
 			        	<img alt="{{ post.imageAlt }}" src="{{ site.url }}{{ post.image-slider }}">
 			      	</div>
 			    </li>
+			    {% endif %}
 			    {% endif %}
 				{% endfor %}
 			</ul>
