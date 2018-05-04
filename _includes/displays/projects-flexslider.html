@@ -10,17 +10,19 @@
     	<h3>Featured Projects</h3>
   	</div>
 
-	<div class="flexslider">
+	<div class="flexslider flex-design">
 		<ul class="slides">
 	  		{% for page in site.categories.projects %}
 	  		<li data-thumb="{{ page.image-slider }}">
 	  			<a href="{{ site.url}}{{ page.permalink }}">
 		    		<img src="{{ page.image-slider }}">
+		    		<hr>
 		    		<p class="flex-caption">{{ page.excerpt }}</p>
 		    	</a>
 	 		</li>
 	  		{% endfor %}
 		</ul>
 	</div>
-	<p style="text-align: center"><a href="{{ site.url }}/projects">See All Projects</a></p>
+
+	<p class="button-style"><a href="{{ site.url }}/projects">See All Projects</a></p>
 </div>

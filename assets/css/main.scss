@@ -15,7 +15,7 @@
 //  - Style For Flexslider Displays
 //  - Style For Basic Display
 //  - Style For Reveal Display
-//  - Containers
+//  - Containers & Buttons
 //  - Style For Particle Theme Header
 // =====================================
 
@@ -429,25 +429,51 @@ nav.primary ul {
 // Style For Flexslider Displays
 // =====================================
 
+.flex-design {
+  background: $main;
+  border-radius: 10px;
+  padding: 5%;
+  &:hover {
+    background: #fff;
+    border-color: $main;
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    -ms-animation-duration:2s;
+    -o-animation-duration:2s;
+    animation-duration:2s;
+    ul > li > a > p {
+      color: $main;
+    }
+    ul > li > a > hr {
+      background-color: $main;
+      height: 1px;
+    }
+  }
+  ul > li > a {
+    text-decoration: none;
+    hr {
+      background-color: #fff;
+      height: 1px;
+    }
+  }
+}
+
 .flex-direction-nav a {
   height: 55px;
 }
 
 .flex-caption {
-  font-size: 16px;
+  font-size: 18px;
   color: #fff;
   font-family: 'Raleway', sans-serif;
   text-align: center;
+  text-decoration: none;
 
-  width: 100%;
-  padding: 2%;
-
-  background: $main;
-  border-radius: 5px;
-
-  @include mobile {
-    display: none;
-  }
+  padding: none;
 }
 
 // =====================================
@@ -611,8 +637,54 @@ nav.primary ul {
 }
 
 // =====================================
-// Containers
+// Containers & Buttons
 // =====================================
+
+.button-style {
+
+  margin-bottom: 10px;
+  padding: 10px;
+  background: $main;
+  border-radius: 10px;
+  border-style: solid;
+  text-align: center;
+
+  a {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  a:before {
+    content:"⟩";
+    padding-right: 12px;
+  }
+  @include mobile {
+    font-size: 15px;
+    padding: 5px;
+  }
+  &:hover {
+    background: #fff;
+    border-color: $main;
+    border-style: solid;
+    -webkit-animation-name: fadeIn;
+    -moz-animation-name: fadeIn;
+    -o-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration:2s;
+    -moz-animation-duration:2s;
+    -ms-animation-duration:2s;
+    -o-animation-duration:2s;
+    animation-duration:2s;
+    a {
+      color: $main;
+    }
+  }
+  // &:hover a {
+  //   color: $main;
+  // }
+}
 
 .video-container {
   position: relative;
