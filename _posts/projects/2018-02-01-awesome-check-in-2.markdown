@@ -50,8 +50,19 @@ Implementing a universal theme for Ionic apps is faily straightforward using the
 		text-align:center;
 		text-transform: uppercase;
 	}
+	.cardHeader {
+		@extend .cardFont;
+		font-size: 150%;
+		font-weight: 600;
+	}
+	.cardContent {
+		@extend .cardFont;
+		font-size: 100%;
+		font-weight: 500;
+		height: 100%;
+	}
 
-`cardFont` was one of the most popular classes used throughout the application. Just about every single page has cards on it that needed to be formatted. This allowed for just one location to control the look of the text due to `cardHeader` and `cardContent` extended the class. With this paradigm, all cards could be styled by simply adding the correct class to the `ion-card-header` and the `ion-card-content`. The issue now is that the fonts are not always working properly for the version built on the newest iPad even though fonts work fine on the emulator, my Android phone, and the old iPads.
+`cardFont` was one of the most popular classes used throughout the application. Just about every single page has cards on it that needed to be formatted. This allowed for just one location to define many of the text style attributes while other styles like `cardHeader` and `cardContent` could simply extend the class. With this paradigm, almost all of the cards throughout could be styled by simply adding the correct style class to the `ion-card-header` and the `ion-card-content`. There is still an issue where some of the fonts are not working properly on the newest iPad even though they are working fine on the emulator, my Android phone, and the older iPads.
 
 ##### Card Background Color
 
@@ -79,12 +90,12 @@ The power of Angular data binding allows for the syntax seen below from the html
 
 ### Fixed Timer
 
-Aside from just re-designing the interface a decent chunk of the underlying code was upgraded. The biggest change to the controller side of the application was with the way that the idle timer works. Before, each page had its own timer that was started upon construction and stopped when navigating to the next page. Unfortunately, when the user clicked the back button the timer wouldn't stop. Therefore the user could have a bunch of timer instances all running at the same time causing duplicate notifications.
+Aside from just re-designing the interface, a decent chunk of the underlying code was upgraded. The biggest change to the controller side of the application was with the way that the idle timer works. Before, each page had its own timer that was started upon construction and stopped when navigating to the next page. Unfortunately, when the user clicked the back button the timer wouldn't stop. Therefore the user could have a bunch of timer instances all running at the same time causing duplicate notifications.
 
 {% raw %}
 <div class="row">
 	<div class="six columns">
-		<p>With the second version of the Check-In app the timer provider itself became simplified. Also, the process of implementing the timer within a page is now much more straightforward. The home page instantiates the only instance of the timer which then gets passed along to the proceeding pages. Then the timer can be started within the lifecycle event <code>ionViewDidEnter()</code> and stopped within <code>ionViewWillLeave()</code>. The ugliest issue now is that each page still has its own copy of the code for its `AlertController` notification as well as a custom listener using the same time-tick system used by the provider.</p>
+		<p>With the second version of the Check-In app I was able to make the <code>TimerProvider</code> itself significantly simpler. Also, the process of implementing the timer within a page is now much more straightforward. The home page instantiates the only instance of the timer which then gets passed along to the proceeding pages. Then the timer can be started within the lifecycle event <code>ionViewDidEnter()</code> and stopped within <code>ionViewWillLeave()</code>. Now it is functioning perfectly but the code still feels like it could still be cleaner. Specifically, each page still has its own copy of the code for the <code>AlertController</code> notification as well as a custom listener using the same time-tick system used by the provider. To fix the <code>AlertController</code> repetition I imagine Angular has a way to define an interface template for a re-usable module or provider. As far as the repetitive time-tick listener implementation, there may be a way to abstract that code into its own provider or maybe even build it in to the official <code>TimerProvider</code>.</p>
 	</div>
 	<div class="six columns">
 		<img src="/assets/img/project-images/awesome-checkin/checkin2-idle.png" alt="Idle Timer">
@@ -94,4 +105,4 @@ Aside from just re-designing the interface a decent chunk of the underlying code
 
 ### Awesome Check-In
 
-The process of implementing an interface design mockup was quite the experience. My skill with CSS/Sass, Bootstrap, and even Angular expended exponentially throughout the upgrade. It was a whole lot of fun to teach myself all of these new tools to develop an application and then totally re-vamping it with a new look created by an actual designer. The difference between the original app and the latest version is quite astonishing.
+It was a whole lot of fun to teach myself all of these new tools to develop the Awesome Check-In application in the first place. To then take it to the next level, thanks to the help of a designer, was a really exciting process. Not only does the app look significantly more legitimate, I learned a lot in the process. My skill with CSS/Sass, TypeScript, Bootstrap, and even Angular expended exponentially throughout the upgrade.
